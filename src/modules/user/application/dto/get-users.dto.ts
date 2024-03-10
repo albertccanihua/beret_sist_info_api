@@ -1,5 +1,6 @@
 import { IsBoolean, IsEnum, IsOptional, IsString, IsUUID } from "class-validator";
 import { DocumentTypesEnum } from "src/common/enum/document-types.enum";
+import { RolesEnum } from "src/common/enum/roles.enum";
 
 export class GetUsersDto {
 
@@ -21,7 +22,14 @@ export class GetUsersDto {
 
     @IsString()
     @IsOptional()
-    lastname: string;
+    paternal_surname: string;
+
+    @IsString()
+    @IsOptional()
+    maternal_lastname: string;
+
+    @IsEnum(RolesEnum)
+    role: RolesEnum;
 
     @IsString()
     @IsOptional()

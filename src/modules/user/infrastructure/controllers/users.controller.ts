@@ -31,7 +31,6 @@ export class UsersController {
     }
 
     @Get('/list')
-    @UsePipes(ValidationPipe)
     list(@Query() listUsersDto: ListUsersDto) {
         return new ListUsersUseCase(this.usersRepository).exec(listUsersDto);
     }

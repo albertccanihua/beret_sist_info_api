@@ -20,8 +20,8 @@ export class ListUsersUseCase {
             response.result(users);
 
             return response.resolve();
-        } catch (err) {
-            throw new HandleExceptionHelper(err).throw();
+        } catch (error) {
+            throw new HandleExceptionHelper(error).throw();
         }
     }
 }

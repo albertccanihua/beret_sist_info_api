@@ -1,6 +1,7 @@
 import { IsBoolean, IsEmail, IsOptional, IsEnum, IsString, IsStrongPassword } from "class-validator";
 import { DocumentTypesEnum } from "src/common/enum/document-types.enum";
 import { GendersEnum } from "src/common/enum/genders.enum";
+import { RolesEnum } from "src/common/enum/roles.enum";
 
 export class CreateUserDto {
 
@@ -17,7 +18,10 @@ export class CreateUserDto {
     name: string;
 
     @IsString()
-    lastname: string;
+    paternal_surname: string;
+
+    @IsString()
+    maternal_lastname: string;
 
     @IsEmail()
     @IsOptional()
@@ -29,6 +33,9 @@ export class CreateUserDto {
 
     @IsEnum(GendersEnum)
     gender: GendersEnum;
+
+    @IsEnum(RolesEnum)
+    role: RolesEnum;
 
     @IsString()
     username: string;

@@ -5,6 +5,7 @@ import { ResponseHelper } from "src/common/helpers/response.helper";
 import { HttpStatus } from "@nestjs/common";
 import { IResponse } from "src/common/interfaces/response.interface";
 import * as bcrypt from 'bcrypt';
+import { HandleExceptionHelper } from "src/common/helpers/handle-exception.helper";
 
 export class CreateUserUseCase {
 
@@ -21,20 +22,24 @@ export class CreateUserUseCase {
                 document_number: data.document_number,
                 dob: data.dob,
                 name: data.name,
-                lastname: data.lastname,
+                paternal_surname: data.paternal_surname,
+                maternal_lastname: data.maternal_lastname,
                 email: data.email,
                 phone_number: data.phone_number,
                 gender: data.gender,
+                role: data.role,
                 username: data.username,
                 password: bcrypt.hashSync(data.password, 10),
                 status: data.status
             });
 
+            delete user.password;
+
             response.code(HttpStatus.CREATED).result(user);
 
             return response.resolve();
-        } catch (err) {
-            console.log(err);
+        } catch (error) {
+            throw new HandleExceptionHelper(error).throw();
         }
     }
 

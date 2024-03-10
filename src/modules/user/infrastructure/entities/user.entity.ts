@@ -1,5 +1,6 @@
 import { DocumentTypesEnum } from "src/common/enum/document-types.enum";
 import { GendersEnum } from "src/common/enum/genders.enum";
+import { RolesEnum } from "src/common/enum/roles.enum";
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('users')
@@ -18,6 +19,7 @@ export class UserEntity {
     @Column({
         type: 'varchar',
         length: 30,
+        unique: true,
         nullable: false
     })
     document_number: string;
@@ -37,14 +39,22 @@ export class UserEntity {
 
     @Column({
         type: 'varchar',
-        length: 100,
+        length: 50,
         nullable: false
     })
-    lastname: string;
+    paternal_surname: string;
+
+    @Column({
+        type: 'varchar',
+        length: 50,
+        nullable: true
+    })
+    maternal_lastname: string;
 
     @Column({
         type: 'varchar',
         length: 150,
+        unique: true,
         nullable: true
     })
     email: string;
@@ -61,6 +71,12 @@ export class UserEntity {
         enum: GendersEnum
     })
     gender: GendersEnum
+
+    @Column({
+        type: 'enum',
+        enum: RolesEnum
+    })
+    role: RolesEnum
 
     @Column({
         type: 'varchar',

@@ -1,12 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DoctorModule } from './modules/doctor/doctor.module';
-import { PatientModule } from './modules/patient/patient.module';
 import { UserModule } from './modules/user/infrastructure/bootstrap/user.module';
-import { RecipeModule } from './modules/recipe/recipe.module';
-import { AppointmentModule } from './modules/appointment/appointment.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { GeneralModule } from './modules/general/general.module';
+import { SpecialityModule } from './modules/speciality/infrastructure/bootstrap/speciality.module';
 
 @Module({
   imports: [
@@ -20,11 +17,8 @@ import { GeneralModule } from './modules/general/general.module';
       autoLoadEntities: true,
       synchronize: true,
     }),
-    DoctorModule,
-    PatientModule,
     UserModule,
-    RecipeModule,
-    AppointmentModule,
+    SpecialityModule,
     AuthModule,
     GeneralModule
   ],

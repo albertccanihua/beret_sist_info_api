@@ -3,6 +3,7 @@ import { UsersRepository } from "../../domain/repository/users.repository";
 import { DeleteUserDto } from "../dto/delete-user.dto";
 import { User } from "../../domain/models/user.model";
 import { ResponseHelper } from "src/common/helpers/response.helper";
+import { HandleExceptionHelper } from "src/common/helpers/handle-exception.helper";
 
 export class DeleteUserUseCase {
 
@@ -19,8 +20,8 @@ export class DeleteUserUseCase {
             response.result(user);
 
             return response.resolve();
-        } catch (err) {
-            console.log(err);
+        } catch (error) {
+            throw new HandleExceptionHelper(error).throw();
         }
     }
 }

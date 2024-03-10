@@ -19,9 +19,8 @@ export class GetUsersUseCase {
             response.result(users);
 
             return response.resolve();
-        } catch (err) {
-            console.log(err);
-            throw new HandleExceptionHelper(err).throw();
+        } catch (error) {
+            throw new HandleExceptionHelper(error).throw();
         }
     }
 }

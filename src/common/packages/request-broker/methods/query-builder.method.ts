@@ -31,8 +31,7 @@ export class QueryBuilderMethod<T> extends Request<T> {
     }
 
     async getManyPaginated(page: number, limit: number): Promise<IQueryBuilderPaginatedResponse<T>> {
-        let offset = 1;
-        if (page > 1) offset = (page - 1) * limit;
+        const offset = (page - 1) * limit;
 
         const totalData = await this.query.value.getCount();
         const data = await this.query.value.offset(offset).limit(limit).getMany();
