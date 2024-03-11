@@ -4,6 +4,7 @@ import { DeleteSpecialityDto } from "../dto/delete-speciality.dto";
 import { Speciality } from "../../domain/models/speciality.model";
 import { HandleExceptionHelper } from "src/common/helpers/handle-exception.helper";
 import { ResponseHelper } from "src/common/helpers/response.helper";
+import { NotFoundException } from "@nestjs/common";
 
 export class DeleteSpecialityUseCase {
 
@@ -17,6 +18,7 @@ export class DeleteSpecialityUseCase {
 
             const speciality = await this.specialitiesRepository.delete(data.id);
 
+            if (!speciality) throw new NotFoundException('Speciality not found');
             response.result(speciality);
 
             return response.resolve();

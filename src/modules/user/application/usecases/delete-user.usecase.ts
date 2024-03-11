@@ -4,6 +4,7 @@ import { DeleteUserDto } from "../dto/delete-user.dto";
 import { User } from "../../domain/models/user.model";
 import { ResponseHelper } from "src/common/helpers/response.helper";
 import { HandleExceptionHelper } from "src/common/helpers/handle-exception.helper";
+import { NotFoundException } from "@nestjs/common";
 
 export class DeleteUserUseCase {
 
@@ -17,6 +18,7 @@ export class DeleteUserUseCase {
 
             const user = await this.usersRepository.delete(data.id);
 
+            if (!user) throw new NotFoundException('User not found');
             response.result(user);
 
             return response.resolve();

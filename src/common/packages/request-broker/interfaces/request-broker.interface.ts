@@ -1,5 +1,5 @@
-import {QueryBuilderMethod} from "../methods/query-builder.method";
+import { QueryBuilderMethod } from "../methods/query-builder.method";
 
 export interface IRequestBroker<T> {
-    queryBuilder(): QueryBuilderMethod<T>;
+    queryBuilder(alias: string): QueryBuilderMethod<T>;
 }

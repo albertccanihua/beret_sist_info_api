@@ -2,7 +2,7 @@ import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "t
 import { SpecialityEntity } from "src/modules/speciality/infrastructure/entities/speciality.entity";
 import { PacketEntity } from "./packet.entity";
 
-@Entity('package_specialities')
+@Entity('packet_specialities')
 export class PacketSpecialityEntity {
 
     @PrimaryGeneratedColumn('uuid')

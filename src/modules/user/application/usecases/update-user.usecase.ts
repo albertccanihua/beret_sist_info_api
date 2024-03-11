@@ -5,6 +5,7 @@ import { UsersRepository } from "../../domain/repository/users.repository";
 import * as bcrypt from 'bcrypt';
 import { IResponse } from "src/common/interfaces/response.interface";
 import { HandleExceptionHelper } from "src/common/helpers/handle-exception.helper";
+import { NotFoundException } from "@nestjs/common";
 
 export class UpdateUserUseCase {
 
@@ -31,6 +32,8 @@ export class UpdateUserUseCase {
                 password: bcrypt.hashSync(data.password, 10),
                 status: data.status
             });
+
+            if (!user) throw new NotFoundException('User not found');
 
             delete user.password;
 

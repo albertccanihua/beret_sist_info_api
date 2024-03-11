@@ -15,6 +15,9 @@ import { SpecialitiesRepositoryImpl } from "../repository/speciality.repositoryi
     ],
     providers: [
         SpecialitiesRepositoryImpl
+    ],
+    exports: [
+        TypeOrmModule
     ]
 })
 export class SpecialityModule { }

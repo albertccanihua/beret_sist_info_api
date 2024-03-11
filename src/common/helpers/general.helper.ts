@@ -12,4 +12,14 @@ export class GeneralHelper {
     static existsAndNotEmpty(object: any, key: any): boolean {
         return object.hasOwnProperty(key) && object.key !== "";
     }
+
+    /**
+     * Capitalize first letter of word
+     * 
+     * @param word 
+     * @returns 
+     */
+    static capitalizeFirstLetter(word: string): string {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }
 }

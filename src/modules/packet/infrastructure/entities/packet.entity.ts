@@ -1,5 +1,6 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { PacketSpecialityEntity } from "./packet-speciality.entity";
+import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity";
 
 @Entity('packets')
 export class PacketEntity {
@@ -7,10 +8,8 @@ export class PacketEntity {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @Column({
-        type: 'uuid',
-        nullable: false
-    })
+    @ManyToOne(() => UserEntity)
+    @JoinColumn({ name: 'user_id' })
     user_id: string;
 
     @Column({

@@ -4,6 +4,7 @@ import { UsersRepository } from "../../domain/repository/users.repository";
 import { ShowUserDto } from "../dto/show-user.dto";
 import { ResponseHelper } from "src/common/helpers/response.helper";
 import { IResponse } from "src/common/interfaces/response.interface";
+import { NotFoundException } from "@nestjs/common";
 
 export class ShowUserUseCase {
 
@@ -16,6 +17,9 @@ export class ShowUserUseCase {
             const response = new ResponseHelper();
 
             const user = await this.usersRepository.show(data.id);
+
+            if (!user) throw new NotFoundException('User not found');
+
             response.result(user);
 
             return response.resolve();

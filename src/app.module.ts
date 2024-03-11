@@ -2,8 +2,10 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './modules/user/infrastructure/bootstrap/user.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { GeneralModule } from './modules/general/general.module';
 import { SpecialityModule } from './modules/speciality/infrastructure/bootstrap/speciality.module';
+import { PacketModule } from './modules/packet/infrastructure/bootstrap/packet.module';
+import { GeneralModule } from './modules/general/infrastructure/bootstrap/general.module';
+import { PatientModule } from './modules/patient/infrastructure/bootstrap/patient.module';
 
 @Module({
   imports: [
@@ -19,8 +21,10 @@ import { SpecialityModule } from './modules/speciality/infrastructure/bootstrap/
     }),
     UserModule,
     SpecialityModule,
+    PacketModule,
+    GeneralModule,
+    PatientModule,
     AuthModule,
-    GeneralModule
   ],
   controllers: [],
   providers: [],

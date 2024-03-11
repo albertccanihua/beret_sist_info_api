@@ -29,6 +29,7 @@ export class GetUsersDto {
     maternal_lastname: string;
 
     @IsEnum(RolesEnum)
+    @IsOptional()
     role: RolesEnum;
 
     @IsString()

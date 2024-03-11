@@ -6,7 +6,7 @@ import { UpdatePacketDto } from "../dto/update-packet.dto";
 import { Packet } from "../../domain/models/packet.model";
 import { ResponseHelper } from "src/common/helpers/response.helper";
 import { GeneralHelper } from "src/common/helpers/general.helper";
-import { PacketSpeciality } from "../../domain/models/packet-speciality.model";
+import { CreateManyPacketSpecialityDto } from "../dto/create-many-packet-speciality.dto";
 
 export class UpdatePacketUseCase {
 
@@ -26,11 +26,19 @@ export class UpdatePacketUseCase {
                 status: data.status
             });
 
-            data.specialities.forEach(async (speciality: PacketSpeciality) => {
+            data.specialities.forEach(async (speciality: CreateManyPacketSpecialityDto) => {
                 if (GeneralHelper.existsAndNotEmpty(speciality, 'id')) {
-                    await this.packetSpecialitiesRepository.update(speciality.id, speciality);
+                    await this.packetSpecialitiesRepository.update(speciality.id, {
+                        sessions: speciality.sessions,
+                        packet: packet,
+                        speciality: speciality.speciality
+                    });
                 } else {
-                    await this.packetSpecialitiesRepository.create(speciality);
+                    await this.packetSpecialitiesRepository.create({
+                        sessions: speciality.sessions,
+                        packet: packet,
+                        speciality: speciality.speciality
+                    });
                 }
             });
 

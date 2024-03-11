@@ -1,20 +1,12 @@
-import { DocumentTypesEnum } from "src/common/enum/document-types.enum";
-import { GendersEnum } from "src/common/enum/genders.enum";
 import { RolesEnum } from "src/common/enum/roles.enum";
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { ManagementTypeEntity } from "src/modules/general/infrastructure/entities/management-type.entity";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('users')
 export class UserEntity {
 
     @PrimaryGeneratedColumn('uuid')
     id: string;
-
-    @Column({
-        type: 'enum',
-        enum: DocumentTypesEnum,
-        nullable: false
-    })
-    document_type: DocumentTypesEnum;
 
     @Column({
         type: 'varchar',
@@ -68,12 +60,6 @@ export class UserEntity {
 
     @Column({
         type: 'enum',
-        enum: GendersEnum
-    })
-    gender: GendersEnum
-
-    @Column({
-        type: 'enum',
         enum: RolesEnum
     })
     role: RolesEnum
@@ -98,6 +84,14 @@ export class UserEntity {
         nullable: false
     })
     status: boolean;
+
+    @ManyToOne(() => ManagementTypeEntity)
+    @JoinColumn({ name: 'type_document_id' })
+    type_document_id: ManagementTypeEntity;
+
+    @ManyToOne(() => ManagementTypeEntity)
+    @JoinColumn({ name: 'type_gender_id' })
+    type_gender_id: ManagementTypeEntity;
 
     @CreateDateColumn({
         name: 'created_at',

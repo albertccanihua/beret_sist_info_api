@@ -1,6 +1,6 @@
 import { Type } from "class-transformer";
 import { IsArray, IsBoolean, IsOptional, IsString, IsUUID, ValidateNested } from "class-validator";
-import { PacketSpeciality } from "../../domain/models/packet-speciality.model";
+import { CreateManyPacketSpecialityDto } from "./create-many-packet-speciality.dto";
 
 export class CreatePacketDto {
 
@@ -20,7 +20,7 @@ export class CreatePacketDto {
 
     @IsArray()
     @ValidateNested({ each: true })
-    @Type(() => PacketSpeciality)
-    specialities: PacketSpeciality[];
+    @Type(() => CreateManyPacketSpecialityDto)
+    specialities: CreateManyPacketSpecialityDto[];
 
 }

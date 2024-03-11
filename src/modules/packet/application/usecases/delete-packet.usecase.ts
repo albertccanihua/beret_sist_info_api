@@ -4,6 +4,7 @@ import { IResponse } from "src/common/interfaces/response.interface";
 import { PacketsRepository } from "../../domain/repository/packets.repository";
 import { DeletePacketDto } from "../dto/delete-packet.dto";
 import { Packet } from "../../domain/models/packet.model";
+import { NotFoundException } from "@nestjs/common";
 
 export class DeletePacketUseCase {
 
@@ -17,6 +18,7 @@ export class DeletePacketUseCase {
 
             const packet = await this.packetsRepository.delete(data.id);
 
+            if (!packet) throw new NotFoundException('Packet not found');
             response.result(packet);
 
             return response.resolve();
