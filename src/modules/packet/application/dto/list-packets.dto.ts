@@ -9,7 +9,7 @@ export class ListPacketsDto extends PaginateDto {
 
     @IsUUID()
     @IsOptional()
-    user_id: string;
+    user_creator: string;
 
     @IsString()
     @IsOptional()

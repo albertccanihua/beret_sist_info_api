@@ -8,7 +8,7 @@ export class GetPatientsDto {
 
     @IsUUID()
     @IsOptional()
-    user_id: string;
+    user_creator: string;
 
     @IsString()
     @IsOptional()
@@ -40,14 +40,14 @@ export class GetPatientsDto {
 
     @IsUUID()
     @IsOptional()
-    type_document_id: string;
+    type_document: string;
 
     @IsUUID()
     @IsOptional()
-    type_gender_id: string;
+    type_gender: string;
 
     @IsUUID()
     @IsOptional()
-    type_financing_id: string;
+    type_financing: string;
 
 }

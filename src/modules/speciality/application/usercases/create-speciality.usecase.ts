@@ -17,7 +17,7 @@ export class CreateSpecialityUseCase {
             const response = new ResponseHelper();
 
             const speciality = await this.specialitiesRepository.create({
-                user_id: data.user_id,
+                user_creator: data.user_creator,
                 code: data.code,
                 name: data.name,
                 description: data.description,

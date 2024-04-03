@@ -8,7 +8,7 @@ export class GetPacketsDto {
 
     @IsUUID()
     @IsOptional()
-    user_id: string;
+    user_creator: string;
 
     @IsString()
     @IsOptional()

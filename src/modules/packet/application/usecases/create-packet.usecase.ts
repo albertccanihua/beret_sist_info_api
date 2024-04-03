@@ -22,7 +22,7 @@ export class CreatePacketUseCase {
             const response = new ResponseHelper();
 
             const packet = await this.packetsRepository.create({
-                user_id: data.user_id,
+                user_creator: data.user_creator,
                 name: data.name,
                 description: data.description,
                 status: data.status

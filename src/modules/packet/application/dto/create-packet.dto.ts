@@ -5,7 +5,7 @@ import { CreateManyPacketSpecialityDto } from "./create-many-packet-speciality.d
 export class CreatePacketDto {
 
     @IsUUID()
-    user_id: string;
+    user_creator: string;
 
     @IsString()
     name: string;

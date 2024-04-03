@@ -23,7 +23,7 @@ export class PacketsRepositoryImpl extends BaseRepositoryImpl<PacketEntity, Pack
                 .getInstance()
                 .leftJoinAndSelect('packet.packet_specialities', 'packet_speciality')
                 .innerJoinAndSelect('packet_speciality.speciality', 'speciality')
-                .innerJoinAndSelect('speciality.user_id', 'user')
+                .innerJoinAndSelect('speciality.user_creator_id', 'user')
                 .where('packet.id = :id', { id: id })
                 .getOne();
 

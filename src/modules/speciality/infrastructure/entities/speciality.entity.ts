@@ -9,8 +9,8 @@ export class SpecialityEntity {
     id: string;
 
     @ManyToOne(() => UserEntity)
-    @JoinColumn({ name: 'user_id' })
-    user_id: UserEntity;
+    @JoinColumn({ name: 'user_creator_id' })
+    user_creator: UserEntity;
 
     @Column({
         type: 'varchar',

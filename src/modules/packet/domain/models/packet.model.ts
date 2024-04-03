@@ -1,6 +1,6 @@
 export class Packet {
     id?: string;
-    user_id: string;
+    user_creator: string;
     name: string;
     description?: string;
     status?: boolean;

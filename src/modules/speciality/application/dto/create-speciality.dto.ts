@@ -3,7 +3,7 @@ import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
 export class CreateSpecialityDto {
 
     @IsUUID()
-    user_id: string;
+    user_creator: string;
 
     @IsString()
     code: string;

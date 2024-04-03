@@ -1,7 +1,7 @@
 import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
 import { PaginateDto } from "src/common/dto/paginate.dto";
 
-export class ListUsersDto extends PaginateDto {
+export class ListManagementTypesDto extends PaginateDto {
 
     @IsUUID()
     @IsOptional()
@@ -9,7 +9,7 @@ export class ListUsersDto extends PaginateDto {
 
     @IsString()
     @IsOptional()
-    document_number: string;
+    code: string;
 
     @IsString()
     @IsOptional()
@@ -17,26 +17,18 @@ export class ListUsersDto extends PaginateDto {
 
     @IsString()
     @IsOptional()
-    paternal_surname: string;
+    description: string;
 
     @IsString()
     @IsOptional()
-    maternal_lastname: string;
+    data: string;
 
     @IsString()
     @IsOptional()
-    username: string;
+    type: string;
 
     @IsBoolean()
     @IsOptional()
     status: string;
-
-    @IsUUID()
-    @IsOptional()
-    type_document: string;
-
-    @IsUUID()
-    @IsOptional()
-    type_role: string;
 
 }

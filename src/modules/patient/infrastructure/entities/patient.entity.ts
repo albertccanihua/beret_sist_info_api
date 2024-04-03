@@ -9,8 +9,8 @@ export class PatientEntity {
     id: string;
 
     @ManyToOne(() => UserEntity)
-    @JoinColumn({ name: 'user_id' })
-    user_id: UserEntity;
+    @JoinColumn({ name: 'user_creator_id' })
+    user_creator: UserEntity;
 
     @Column({
         type: 'varchar',
@@ -75,7 +75,7 @@ export class PatientEntity {
         referencedColumnName: 'id',
         foreignKeyConstraintName: 'fk_mt_p_type_document_id'
     })
-    type_document_id: ManagementTypeEntity;
+    type_document: ManagementTypeEntity;
 
     @ManyToOne(() => ManagementTypeEntity)
     @JoinColumn({
@@ -83,15 +83,15 @@ export class PatientEntity {
         referencedColumnName: 'id',
         foreignKeyConstraintName: 'fk_mt_p_type_gender_id'
     })
-    type_gender_id: ManagementTypeEntity;
+    type_gender: ManagementTypeEntity;
 
     @ManyToOne(() => ManagementTypeEntity)
     @JoinColumn({
-        name: 'type_gender_id',
+        name: 'type_financing_id',
         referencedColumnName: 'id',
         foreignKeyConstraintName: 'fk_mt_p_type_financing_id'
     })
-    type_financing_id: ManagementTypeEntity;
+    type_financing: ManagementTypeEntity;
 
     @CreateDateColumn({
         name: 'created_at',

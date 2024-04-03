@@ -18,7 +18,6 @@ export class UpdateUserUseCase {
             const response = new ResponseHelper();
 
             const user = await this.usersRepository.update(data.id, {
-                document_type: data.document_type,
                 document_number: data.document_number,
                 dob: data.dob,
                 name: data.name,
@@ -26,11 +25,12 @@ export class UpdateUserUseCase {
                 maternal_lastname: data.maternal_lastname,
                 email: data.email,
                 phone_number: data.phone_number,
-                gender: data.gender,
-                role: data.role,
                 username: data.username,
                 password: bcrypt.hashSync(data.password, 10),
-                status: data.status
+                status: data.status,
+                type_document: data.type_document,
+                type_gender: data.type_gender,
+                type_role: data.type_role,
             });
 
             if (!user) throw new NotFoundException('User not found');

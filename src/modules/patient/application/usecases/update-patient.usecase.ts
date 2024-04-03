@@ -17,7 +17,7 @@ export class UpdatePatientUseCase {
             const response = new ResponseHelper();
 
             const patient = await this.patientsRepository.update(data.id, {
-                user_id: data.user_id,
+                user_creator: data.user_creator,
                 document_number: data.document_number,
                 dob: data.dob,
                 name: data.name,
@@ -26,9 +26,9 @@ export class UpdatePatientUseCase {
                 email: data.email,
                 phone_number: data.email,
                 status: data.status,
-                type_document_id: data.type_document_id,
-                type_gender_id: data.type_gender_id,
-                type_financing_id: data.type_financing_id
+                type_document: data.type_document,
+                type_gender: data.type_gender,
+                type_financing: data.type_financing
             });
 
             if (!patient) throw new NotFoundException('Patient not found');

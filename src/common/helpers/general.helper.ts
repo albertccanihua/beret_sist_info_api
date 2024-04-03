@@ -10,7 +10,7 @@ export class GeneralHelper {
      * @param key
      */
     static existsAndNotEmpty(object: any, key: any): boolean {
-        return object.hasOwnProperty(key) && object.key !== "";
+        return object.hasOwnProperty(key) && object[key] != '';
     }
 
     /**

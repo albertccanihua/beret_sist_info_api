@@ -9,8 +9,8 @@ export class PacketEntity {
     id: string;
 
     @ManyToOne(() => UserEntity)
-    @JoinColumn({ name: 'user_id' })
-    user_id: string;
+    @JoinColumn({ name: 'user_creator_id' })
+    user_creator: string;
 
     @Column({
         type: 'varchar',

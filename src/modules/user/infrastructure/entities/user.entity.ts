@@ -46,7 +46,6 @@ export class UserEntity {
     @Column({
         type: 'varchar',
         length: 150,
-        unique: true,
         nullable: true
     })
     email: string;
@@ -59,14 +58,9 @@ export class UserEntity {
     phone_number: string;
 
     @Column({
-        type: 'enum',
-        enum: RolesEnum
-    })
-    role: RolesEnum
-
-    @Column({
         type: 'varchar',
         length: 100,
+        unique: true,
         nullable: false
     })
     username: string;
@@ -87,11 +81,15 @@ export class UserEntity {
 
     @ManyToOne(() => ManagementTypeEntity)
     @JoinColumn({ name: 'type_document_id' })
-    type_document_id: ManagementTypeEntity;
+    type_document: ManagementTypeEntity;
 
     @ManyToOne(() => ManagementTypeEntity)
     @JoinColumn({ name: 'type_gender_id' })
-    type_gender_id: ManagementTypeEntity;
+    type_gender: ManagementTypeEntity;
+
+    @ManyToOne(() => ManagementTypeEntity)
+    @JoinColumn({ name: 'type_role_id' })
+    type_role: ManagementTypeEntity;
 
     @CreateDateColumn({
         name: 'created_at',

@@ -1,6 +1,6 @@
 export class Patient {
 
-    user_id: string;
+    user_creator: string;
     document_number: string;
     dob: string;
     name: string;
@@ -9,8 +9,8 @@ export class Patient {
     email?: string;
     phone_number?: string;
     status?: boolean;
-    type_document_id: string;
-    type_gender_id: string;
-    type_financing_id: string;
+    type_document: string;
+    type_gender: string;
+    type_financing: string;
 
 }

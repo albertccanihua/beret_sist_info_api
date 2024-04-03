@@ -1,6 +1,6 @@
 export class Speciality {
     id?: string;
-    user_id: string;
+    user_creator: string;
     code: string;
     name: string;
     description?: string;

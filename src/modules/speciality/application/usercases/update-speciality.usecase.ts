@@ -16,7 +16,7 @@ export class UpdateSpecialityUseCase {
             const response = new ResponseHelper();
 
             const speciality = await this.specialitiesRepository.update(data.id, {
-                user_id: data.user_id,
+                user_creator: data.user_creator,
                 code: data.code,
                 name: data.name,
                 description: data.description

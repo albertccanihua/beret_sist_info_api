@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Query, UsePipes, ValidationPipe } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { CreateUserDto } from "../../application/dto/create-user.dto";
 import { CreateUserUseCase } from "../../application/usecases/create-user.usecase";
 import { UsersRepositoryImpl } from "../repository/users.repositoryimpl";

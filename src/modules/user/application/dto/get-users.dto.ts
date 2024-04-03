@@ -1,16 +1,10 @@
-import { IsBoolean, IsEnum, IsOptional, IsString, IsUUID } from "class-validator";
-import { DocumentTypesEnum } from "src/common/enum/document-types.enum";
-import { RolesEnum } from "src/common/enum/roles.enum";
+import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
 
 export class GetUsersDto {
 
     @IsUUID()
     @IsOptional()
     id: string;
-
-    @IsEnum(DocumentTypesEnum)
-    @IsOptional()
-    document_type: DocumentTypesEnum;
 
     @IsString()
     @IsOptional()
@@ -28,10 +22,6 @@ export class GetUsersDto {
     @IsOptional()
     maternal_lastname: string;
 
-    @IsEnum(RolesEnum)
-    @IsOptional()
-    role: RolesEnum;
-
     @IsString()
     @IsOptional()
     username: string;
@@ -40,4 +30,11 @@ export class GetUsersDto {
     @IsOptional()
     status: string;
 
+    @IsUUID()
+    @IsOptional()
+    type_document: string;
+
+    @IsUUID()
+    @IsOptional()
+    type_role: string;
 }

@@ -29,4 +29,5 @@ import { PatientModule } from './modules/patient/infrastructure/bootstrap/patien
   controllers: [],
   providers: [],
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -3,7 +3,7 @@ import { IsBoolean, IsEmail, IsOptional, IsString, IsUUID } from "class-validato
 export class CreatePatientDto {
 
     @IsUUID()
-    user_id: string;
+    user_creator: string;
 
     @IsString()
     document_number: string;
@@ -21,7 +21,7 @@ export class CreatePatientDto {
     @IsOptional()
     maternal_lastname: string;
 
-    @IsEmail()
+    @IsString()
     @IsOptional()
     email: string;
 
@@ -34,11 +34,11 @@ export class CreatePatientDto {
     status: boolean;
 
     @IsUUID()
-    type_document_id: string;
+    type_document: string;
 
     @IsUUID()
-    type_gender_id: string;
+    type_gender: string;
 
     @IsUUID()
-    type_financing_id: string;
+    type_financing: string;
 }

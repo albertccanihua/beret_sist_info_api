@@ -6,6 +6,10 @@ import { CreateManagementTypeUseCase } from "../../application/usecases/create-m
 import { CreateManagementTypeDto } from "../../application/dto/create-management-type.dto";
 import { UpdateManagementTypeDto } from "../../application/dto/update-management-type.dto";
 import { UpdateManagementTypeUseCase } from "../../application/usecases/update-management-type.usecase";
+import { ListManagementTypesDto } from "../../application/dto/list-management-types.dto";
+import { ListManagementTypesUseCase } from "../../application/usecases/list-management-tyeps.usecase";
+import { ShowManagementTypeUseCase } from "../../application/usecases/show-management-type.usecase";
+import { ShowManagementTypeDto } from "../../application/dto/show-management-type.dto";
 
 @Controller('management-types')
 export class ManagementTypesController {
@@ -14,20 +18,20 @@ export class ManagementTypesController {
         private readonly managementTypesRepository: ManagementTypesRepositoryImpl
     ) { }
 
-    // @Get('/show/:id')
-    // show(@Param('id') id: string) {
-    //     return new ShowSpecialityUseCase(this.specialitiesRepository).exec({ id } as ShowSpecialityDto);
-    // }
+    @Get('/show/:id')
+    show(@Param('id') id: string) {
+        return new ShowManagementTypeUseCase(this.managementTypesRepository).exec({ id } as ShowManagementTypeDto);
+    }
 
     @Get('/get')
     get(@Query() getManagementTypesDto: GetManagementTypesDto) {
         return new GetManagementTypesUseCase(this.managementTypesRepository).exec(getManagementTypesDto);
     }
 
-    // @Get('/list')
-    // list(@Query() listSpecialitiesDto: ListSpecialitiesDto) {
-    //     return new ListSpecialitiesUseCase(this.specialitiesRepository).exec(listSpecialitiesDto);
-    // }
+    @Get('/list')
+    list(@Query() listSpecialitiesDto: ListManagementTypesDto) {
+        return new ListManagementTypesUseCase(this.managementTypesRepository).exec(listSpecialitiesDto);
+    }
 
     @Post()
     create(@Body() createManagementTypeDto: CreateManagementTypeDto) {
@@ -38,9 +42,4 @@ export class ManagementTypesController {
     update(@Body() updateManagementType: UpdateManagementTypeDto) {
         return new UpdateManagementTypeUseCase(this.managementTypesRepository).exec(updateManagementType);
     }
-
-    // @Delete()
-    // delete(@Body() deleteSpecialityDto: DeleteSpecialityDto) {
-    //     return new DeleteSpecialityUseCase(this.specialitiesRepository).exec(deleteSpecialityDto);
-    // }
 }
