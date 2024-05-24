@@ -7,18 +7,26 @@ import { GeneralModule } from './modules/general/infrastructure/bootstrap/genera
 import { PatientModule } from './modules/patient/infrastructure/bootstrap/patient.module';
 import { TreatmentModule } from './modules/treatment/infrastructure/bootstrap/treatment.module';
 import { EventEmitterModule } from '@nestjs/event-emitter';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'mysql-6c7c9f2-oscarquirozoch-1e36.l.aivencloud.com',
-      port: 17871,
-      username: 'avnadmin',
-      password: 'AVNS_bW2-PcmQMiu2qmYulQp',
-      database: 'defaultdb',
-      autoLoadEntities: true,
-      synchronize: true,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        type: 'mysql',
+        host: configService.get('DB_HOST'),
+        port: +configService.get('DB_PORT'),
+        username: configService.get('DB_USERNAME'),
+        password: configService.get('DB_PASSWORD'),
+        database: configService.get('DB_DATABASE'),
+        autoLoadEntities: true,
+        synchronize: true,
+      })
     }),
     EventEmitterModule.forRoot(),
     UserModule,
