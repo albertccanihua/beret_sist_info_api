@@ -6,6 +6,7 @@ import { UserEntity } from '../entities/user.entity';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from '../../application/strategies/jwt.strategy';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   controllers: [
@@ -21,10 +22,11 @@ import { JwtStrategy } from '../../application/strategies/jwt.strategy';
     ]),
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.registerAsync({
-      imports: [],
-      inject: [],
-      useFactory: () => {
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => {
         return {
+          secret: configService.get('JWT_SECRET_KEY'),
           signOptions: {
             expiresIn: '2h'
           }
