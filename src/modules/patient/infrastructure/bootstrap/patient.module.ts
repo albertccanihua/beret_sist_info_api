@@ -15,6 +15,9 @@ import { PatientsRepositoryImpl } from "../repository/patient.repositoryimpl";
     ],
     providers: [
         PatientsRepositoryImpl
+    ],
+    exports: [
+        PatientsRepositoryImpl
     ]
 })
 export class PatientModule { }

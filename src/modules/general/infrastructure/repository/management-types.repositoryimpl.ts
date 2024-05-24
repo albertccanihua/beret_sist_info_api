@@ -18,11 +18,11 @@ export class ManagementTypesRepositoryImpl extends BaseRepositoryImpl<Management
     }
 
     private customFilters(query: IQueryBuilderRequest<ManagementType>, args: any): void {
-        if (GeneralHelper.existsAndNotEmpty(args, 'id')) query.value.where('id = :id', { id: args.id });
-        if (GeneralHelper.existsAndNotEmpty(args, 'code')) query.value.where('code = :code', { code: args.code });
-        if (GeneralHelper.existsAndNotEmpty(args, 'name')) query.value.where('name = :name', { name: args.name });
-        if (GeneralHelper.existsAndNotEmpty(args, 'type')) query.value.where('type = :type', { type: args.type });
-        if (GeneralHelper.existsAndNotEmpty(args, 'status')) query.value.where('status = :status', { status: args.status });
+        if (GeneralHelper.existsAndNotEmpty(args, 'id')) query.value.andWhere('id = :id', { id: args.id });
+        if (GeneralHelper.existsAndNotEmpty(args, 'code')) query.value.andWhere('code = :code', { code: args.code });
+        if (GeneralHelper.existsAndNotEmpty(args, 'name')) query.value.andWhere('name = :name', { name: args.name });
+        if (GeneralHelper.existsAndNotEmpty(args, 'type')) query.value.andWhere('type = :type', { type: args.type });
+        if (GeneralHelper.existsBoolean(args, 'status')) query.value.andWhere('status = :status', { status: args.status });
     }
 
 }

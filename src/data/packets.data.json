@@ -1,0 +1,116 @@
+[
+    {
+        "code": "0070612",
+        "name": "TRATAMIENTO ESPECIALIZADO EN VIOLENCIA FAMILIAR",
+        "relational_codes": "Y04,Y06,Y07,T740,T741,T743,T748,T749",
+        "status": 1
+    },
+    {
+        "code": "0070613",
+        "name": "TRATAMIENTO ESPECIALIZADO DE PERSONAS AFECTADAS POR VIOLENCIA SEXUAL DE 18 A MAS",
+        "relational_codes": "",
+        "status": 1
+    },
+    {
+        "code": "0070614",
+        "name": "TRATAMIENTO DE NIÑOS, NIÑAS Y ADOLECENTES AFECTADOS POR MALTRATO INFANTIL",
+        "relational_codes": "",
+        "status": 1
+    },
+    {
+        "code": "0070615",
+        "name": "TRATAMIENTO DE NIÑOS, NIÑAS Y ADOLECENTES AFECTADOS POR VIOLENCIA SEXUAL",
+        "relational_codes": "T742,Y050,Y051,Y052,Y053,Y054,Y055,Y056,Y057,Y058,Y059",
+        "status": 1
+    },
+    {
+        "code": "0070616",
+        "name": "TRATAMIENTO AMBULATORIO DE NIÑOS Y NIÑAS DE 0 A 17 AÑOS CON TRASTORNOS DEL ASPECTO AUTISTA",
+        "relational_codes": "F840,F841,F845,F848,F849",
+        "status": 1
+    },
+    {
+        "code": "5005927",
+        "name": "TRATAMIENTO AMBULATORIO DE NIÑOS Y NIÑAS DE 0 A 17 AÑOS CON TRASTORNOS MENTALES Y DEL COMPORTAMIENTO",
+        "relational_codes": "F51,F52,F53,F54,F55,F56,F57,F58,F59,F80,F81,F82,F83,F90,F91,F92,F93,F94,F95,F96,F97,F98",
+        "status": 1
+    },
+    {
+        "code": "5005190",
+        "name": "TRATAMIENTO AMBULATORIO DE PERSONAS CON TRANSTORNOS AFECTIVOS (DEPRESION Y CONDUCTA SUICIDA) Y DE ANSIEDAD",
+        "relational_codes": "F31,F32,F33,F34,F38,F33.3",
+        "status": 1
+    },
+    {
+        "code": "0070610",
+        "name": "TRATAMIENTO AMBULATORIO DE PERSONAS CON CONDUCTA SUICIDA",
+        "relational_codes": "X6,X7,X8",
+        "status": 1
+    },
+    {
+        "code": "0070611",
+        "name": "TRATAMIENTO AMBULATORIO DE PERSONAS CON ANSIEDAD",
+        "relational_codes": "F40,F41,F42,F43,F44,F45,F48",
+        "status": 1
+    },
+    {
+        "code": "5005192",
+        "name": "INTERVENCIONES BREVES MOTIVACIONALES PARA PERSONAS CON CUNSUMO PERJUDICIAL DEL ALCOHOL Y TABACO",
+        "relational_codes": "F101,F171,F131",
+        "status": 1
+    },
+    {
+        "code": "70617",
+        "name": "INTERVENCION PARA PERSONAS CON DEPENDENCIA DEL ALCOHOL Y TABACO",
+        "relational_codes": "F102,F172,F132",
+        "status": 1
+    },
+    {
+        "code": "5005194",
+        "name": "REHABILITACIÓN PSICOSOCIAL DE PERSONAS CON TRASTORNOS DEL COMPORTAMIENTO DEBIDO AL CONSUMO DE ALCOHOL",
+        "relational_codes": "F102,F172,F132,90857Z502,C2111.01Z502",
+        "status": 1
+    },
+    {
+        "code": "5005195",
+        "name": "TRATAMIENTO AMBULATORIO A PERSONAS CON SINDROME PSICOTICO O TRANSTORNO DEL ESPECTRO DE LA ESQUIZOFRENIA",
+        "relational_codes": "F28X,F29X,F312,F315,F323,F333,F062,F105,F115,F125,F135,F145,F155,F165,F175,F185,F195",
+        "status": 1
+    },
+    {
+        "code": "0070619",
+        "name": "TRATAMIENTO AMBULATORIO DE PERSONAS CON PRIMER EPISODIO PSICOTICO",
+        "relational_codes": "F238001",
+        "status": 1
+    },
+    {
+        "code": "0070629",
+        "name": "TRATAMIENTO AMBULATORIO PARA LAS PERSONAS CON DETERIORO COGNITIVO",
+        "relational_codes": "F00,F01,F02,F03",
+        "status": 1
+    },
+    {
+        "code": "0070620",
+        "name": "CUIDADOS DE SALUD DOMICILIARIOS A PERSONAS CON DEMENCIA SEVERA Y EN PRECARIAS CONDICIONES ECONOMICAS",
+        "relational_codes": "",
+        "status": 1
+    },
+    {
+        "code": "0070621",
+        "name": "CONTINUIDAD DE CUIDADOS A PERSONAS CON TRASTORNOS MENTALES GRAVES",
+        "relational_codes": "F28X,F29X,F312,F315,F323,F333,F062,F105,F115,F125,F135,F145,F155,F165,F175,F185,F195",
+        "status": 1
+    },
+    {
+        "code": "5005197",
+        "name": "REHABILITACIÓN PSICOSOCIAL DE PERSONAS CON SINDROME O TRASTORNOS ESQUIZOFRENICO",
+        "relational_codes": "F312,F315,F323,F333,F062,F105,F115,F125,F135,F145,F155,F165,F175,F185,F195",
+        "status": 1
+    },
+    {
+        "code": "70623",
+        "name": "REHABILITACIÓN LABORAL",
+        "relational_codes": "",
+        "status": 1
+    }
+]

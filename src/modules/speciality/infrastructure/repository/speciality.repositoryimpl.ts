@@ -22,28 +22,28 @@ export class SpecialitiesRepositoryImpl extends BaseRepositoryImpl<SpecialityEnt
     async list(args: any): Promise<IQueryBuilderPaginatedResponse<SpecialityEntity>> {
         const offset = (args.page - 1) * args.limit;
 
-        const users: SpecialityEntity[] = await this.requestBroker.queryBuilder('speciality')
+        const query = this.requestBroker.queryBuilder('speciality')
             .setArgs(args)
             .applyFilters((query, args) => this.customFilters(query, args))
             .getInstance()
-            .innerJoinAndSelect('speciality.user_creator', 'user_creator')
-            .select(['speciality', ...RelationshipHelper.userCreator()])
-            .offset(offset)
-            .limit(args.limit)
-            .getMany();
+            .leftJoinAndSelect('speciality.user_creator', 'user_creator')
+            .select(['speciality', ...RelationshipHelper.userCreator()]);
+
+        const specialitiesCount = await query.getCount();
+        const specialitiesPaginated: SpecialityEntity[] = await query.offset(offset).limit(args.limit).getMany();
 
         return {
-            total_data: 100,
-            total_page: users.length,
+            total_data: specialitiesCount,
+            total_page: specialitiesPaginated.length,
             page: args.page,
-            data: users
+            data: specialitiesPaginated
         };
     }
 
     private customFilters(query: IQueryBuilderRequest<SpecialityEntity>, args: any): void {
-        if (GeneralHelper.existsAndNotEmpty(args, 'id')) query.value.where('speciality.id = :id', { id: args.id });
-        if (GeneralHelper.existsAndNotEmpty(args, 'code')) query.value.where('speciality.code = :code', { code: args.code });
-        if (GeneralHelper.existsAndNotEmpty(args, 'name')) query.value.where('speciality.name = :name', { name: args.name });
-        if (GeneralHelper.existsAndNotEmpty(args, 'status')) query.value.where('speciality.status = :status', { status: args.status });
+        if (GeneralHelper.existsAndNotEmpty(args, 'id')) query.value.andWhere('speciality.id = :id', { id: args.id });
+        if (GeneralHelper.existsAndNotEmpty(args, 'code')) query.value.andWhere('speciality.code = :code', { code: args.code });
+        if (GeneralHelper.existsAndNotEmpty(args, 'name')) query.value.andWhere('speciality.name LIKE :name', { name: `%${args.name}%` });
+        if (GeneralHelper.existsBoolean(args, 'status')) query.value.andWhere('speciality.status = :status', { status: args.status });
     }
 }

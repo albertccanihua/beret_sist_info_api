@@ -60,9 +60,14 @@ export class BaseRepositoryImpl<Entity, Model> implements BaseRepository<Model>{
     }
 
     async delete(id: any): Promise<Model | any> {
-        const record: Model | null = await this.show(id);
+        const record: Entity | null = await this.show(id);
         if (!record) return null;
-        await this.repository.softRemove(record as DeepPartial<Entity>);
+
+        if (record.hasOwnProperty('deleted_at')) {
+            await this.repository.softRemove(record as DeepPartial<Entity>);
+        } else {
+            await this.repository.remove(record);
+        }
 
         return record;
     }

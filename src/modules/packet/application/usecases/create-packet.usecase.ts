@@ -5,7 +5,6 @@ import { CreatePacketDto } from "../dto/create-packet.dto";
 import { Packet } from "../../domain/models/packet.model";
 import { ResponseHelper } from "src/common/helpers/response.helper";
 import { HttpStatus } from "@nestjs/common";
-import { PacketSpeciality } from "../../domain/models/packet-speciality.model";
 import { GeneralHelper } from "src/common/helpers/general.helper";
 import { PacketSpecialitiesRepository } from "../../domain/repository/packet-specialities.repository";
 import { CreateManyPacketSpecialityDto } from "../dto/create-many-packet-speciality.dto";
@@ -25,6 +24,7 @@ export class CreatePacketUseCase {
                 user_creator: data.user_creator,
                 name: data.name,
                 description: data.description,
+                relational_codes: data.relational_codes,
                 status: data.status
             });
 

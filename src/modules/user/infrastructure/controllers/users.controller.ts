@@ -12,12 +12,18 @@ import { UpdateUserDto } from "../../application/dto/update-user.dto";
 import { UpdateUserUseCase } from "../../application/usecases/update-user.usecase";
 import { DeleteUserUseCase } from "../../application/usecases/delete-user.usecase";
 import { DeleteUserDto } from "../../application/dto/delete-user.dto";
+import { ChangePasswordDto } from "../../application/dto/change-password.dto";
+import { ChangePasswordUseCase } from "../../application/usecases/change-password.usecase";
+import { LoginDto } from "../../application/dto/login.dto";
+import { LoginUseCase } from "../../application/usecases/login.usecase";
+import { JwtService } from "@nestjs/jwt";
 
 @Controller('users')
 export class UsersController {
 
     constructor(
-        private readonly usersRepository: UsersRepositoryImpl
+        private readonly usersRepository: UsersRepositoryImpl,
+        private readonly jwtService: JwtService
     ) { }
 
     @Get('/show/:id')
@@ -48,5 +54,15 @@ export class UsersController {
     @Delete()
     delete(@Body() deleteUserDto: DeleteUserDto) {
         return new DeleteUserUseCase(this.usersRepository).exec(deleteUserDto);
+    }
+
+    @Put('/update-password')
+    changePassword(@Body() changePasswordDto: ChangePasswordDto) {
+        return new ChangePasswordUseCase(this.usersRepository).exec(changePasswordDto);
+    }
+
+    @Post('login')
+    login(@Body() loginDto: LoginDto) {
+        return new LoginUseCase(this.usersRepository, this.jwtService).exec(loginDto);
     }
 }

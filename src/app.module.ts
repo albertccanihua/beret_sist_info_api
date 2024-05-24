@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './modules/user/infrastructure/bootstrap/user.module';
-import { AuthModule } from './modules/auth/auth.module';
 import { SpecialityModule } from './modules/speciality/infrastructure/bootstrap/speciality.module';
 import { PacketModule } from './modules/packet/infrastructure/bootstrap/packet.module';
 import { GeneralModule } from './modules/general/infrastructure/bootstrap/general.module';
 import { PatientModule } from './modules/patient/infrastructure/bootstrap/patient.module';
+import { TreatmentModule } from './modules/treatment/infrastructure/bootstrap/treatment.module';
+import { EventEmitterModule } from '@nestjs/event-emitter';
 
 @Module({
   imports: [
@@ -19,12 +20,13 @@ import { PatientModule } from './modules/patient/infrastructure/bootstrap/patien
       autoLoadEntities: true,
       synchronize: true,
     }),
+    EventEmitterModule.forRoot(),
     UserModule,
     SpecialityModule,
     PacketModule,
     GeneralModule,
     PatientModule,
-    AuthModule,
+    TreatmentModule,
   ],
   controllers: [],
   providers: [],

@@ -10,7 +10,18 @@ export class GeneralHelper {
      * @param key
      */
     static existsAndNotEmpty(object: any, key: any): boolean {
+        if (object[key] === undefined || object[key] == 'undefined') return false;
         return object.hasOwnProperty(key) && object[key] != '';
+    }
+
+    static existsBoolean(object: any, key: any): boolean {
+        if (object.hasOwnProperty(key)) {
+            if (typeof object[key] == 'number') {
+                if ([0, 1].includes(object[key])) return true;
+            }
+        }
+
+        return false;
     }
 
     /**

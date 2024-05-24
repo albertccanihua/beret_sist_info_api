@@ -1,4 +1,4 @@
-import { IsBoolean, IsEmail, IsOptional, IsString, IsUUID } from "class-validator";
+import {IsBoolean, IsOptional, IsString, IsUUID} from "class-validator";
 
 export class CreatePatientDto {
 
@@ -9,6 +9,7 @@ export class CreatePatientDto {
     document_number: string;
 
     @IsString()
+    @IsOptional()
     dob: string;
 
     @IsString()

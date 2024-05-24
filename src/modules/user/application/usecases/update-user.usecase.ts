@@ -17,7 +17,7 @@ export class UpdateUserUseCase {
         try {
             const response = new ResponseHelper();
 
-            const user = await this.usersRepository.update(data.id, {
+            const user = await this.usersRepository.customUpdate(data.id, {
                 document_number: data.document_number,
                 dob: data.dob,
                 name: data.name,
@@ -25,9 +25,6 @@ export class UpdateUserUseCase {
                 maternal_lastname: data.maternal_lastname,
                 email: data.email,
                 phone_number: data.phone_number,
-                username: data.username,
-                password: bcrypt.hashSync(data.password, 10),
-                status: data.status,
                 type_document: data.type_document,
                 type_gender: data.type_gender,
                 type_role: data.type_role,

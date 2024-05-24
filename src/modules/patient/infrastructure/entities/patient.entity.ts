@@ -22,7 +22,7 @@ export class PatientEntity {
 
     @Column({
         type: 'date',
-        nullable: false
+        nullable: true
     })
     dob: string;
 
@@ -50,7 +50,6 @@ export class PatientEntity {
     @Column({
         type: 'varchar',
         length: 150,
-        unique: true,
         nullable: true
     })
     email: string;

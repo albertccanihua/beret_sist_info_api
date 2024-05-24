@@ -1,0 +1,2278 @@
+[
+    {
+        "code": "F000",
+        "name": "Demencia en la enfermedad de alzheimer, de comienzo temprano."
+    },
+    {
+        "code": "F001",
+        "name": "Demencia en la enfermedad de alzheimer, de comienzo tardio."
+    },
+    {
+        "code": "F002",
+        "name": "Demencia en la enfermedad de alzheimer, atipica o de tipo mixto."
+    },
+    {
+        "code": "F009",
+        "name": "Demencia en la enfermedad de alzheimer, no especificada."
+    },
+    {
+        "code": "F010",
+        "name": "Demencia vascular de comienzo agudo."
+    },
+    {
+        "code": "F011",
+        "name": "Demencia vascular por infartos multiples."
+    },
+    {
+        "code": "F012",
+        "name": "Demencia vascular subcortical."
+    },
+    {
+        "code": "F013",
+        "name": "Demencia vascular mixta, cortical y subcortical."
+    },
+    {
+        "code": "F018",
+        "name": "Otras demencias vasculares."
+    },
+    {
+        "code": "F019",
+        "name": "Demencia vascular, no especificada."
+    },
+    {
+        "code": "F020",
+        "name": "Demencia en la enfermedad de Pick."
+    },
+    {
+        "code": "F021",
+        "name": "Demencia en la enfermedad de Creutzfeldt-Jakob."
+    },
+    {
+        "code": "F022",
+        "name": "Demencia en la enfermedad de Huntington."
+    },
+    {
+        "code": "F023",
+        "name": "Demencia en la enfermedad de Parkinson."
+    },
+    {
+        "code": "F024",
+        "name": "Demencia en la enfermedad por virus de la inmunodeficiencia humana [VIH]."
+    },
+    {
+        "code": "F028",
+        "name": "Demencia en otras enfermedades especificadas clasificadas en otra parte."
+    },
+    {
+        "code": "F03x",
+        "name": "Demencia sin especificación."
+    },
+    {
+        "code": "F04x",
+        "name": "Síndrome amnésico orgánico, no inducido por alcohol o por otras sustancias psico."
+    },
+    {
+        "code": "F050",
+        "name": "Delirio no superpuesto a un cuadro de demencia, así descrito."
+    },
+    {
+        "code": "F051",
+        "name": "Delirio superpuesto a un cuadro de demencia."
+    },
+    {
+        "code": "F058",
+        "name": "Otros delirios."
+    },
+    {
+        "code": "F059",
+        "name": "Delirio, no especificado."
+    },
+    {
+        "code": "F060",
+        "name": "Alucinosis orgánica."
+    },
+    {
+        "code": "F061",
+        "name": "Trastorno catatónico, orgánico."
+    },
+    {
+        "code": "F062",
+        "name": "Trastorno delirante [esquizofreniforme], orgánico."
+    },
+    {
+        "code": "F063",
+        "name": "Trastornos del humor [afectivos], orgánicos."
+    },
+    {
+        "code": "F064",
+        "name": "Trastorno de ansiedad, orgánico."
+    },
+    {
+        "code": "F065",
+        "name": "Trastorno disociativo, orgánico."
+    },
+    {
+        "code": "F066",
+        "name": "Trastorno de labilidad emocional [asténico], orgánico."
+    },
+    {
+        "code": "F067",
+        "name": "Trastorno cognoscitivo leve."
+    },
+    {
+        "code": "F068",
+        "name": "Otros trastornos mentales especificados debidos a lesión y disfunción cerebral y a enfermedad."
+    },
+    {
+        "code": "F069",
+        "name": "Trastorno mental no especificado debido a lesión y disfunción cerebral y a enfermedad."
+    },
+    {
+        "code": "F070",
+        "name": "Trastorno de la personalidad, orgánico."
+    },
+    {
+        "code": "F071",
+        "name": "Síndrome postencefalitico."
+    },
+    {
+        "code": "F072",
+        "name": "Síndrome postconcusional."
+    },
+    {
+        "code": "F078",
+        "name": "Otros trastornos orgánicos de la personalidad y del comportamiento debidos a enfermedad."
+    },
+    {
+        "code": "F079",
+        "name": "Trastorno orgánico de la personalidad y del comportamiento debido a enfermedad, lesión."
+    },
+    {
+        "code": "F100",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, intoxicación aguda."
+    },
+    {
+        "code": "F101",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, uso nocivo."
+    },
+    {
+        "code": "F102",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, síndrome de dependencia."
+    },
+    {
+        "code": "F103",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, estado de abstinencia."
+    },
+    {
+        "code": "F104",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F105",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, trastorno psicótico."
+    },
+    {
+        "code": "F106",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, síndrome amnésico."
+    },
+    {
+        "code": "F107",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F108",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F109",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alcohol, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F110",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, intoxicación aguda."
+    },
+    {
+        "code": "F111",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, uso nocivo."
+    },
+    {
+        "code": "F112",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, síndrome de dependencia."
+    },
+    {
+        "code": "F113",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, estado de abstinencia."
+    },
+    {
+        "code": "F114",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F115",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, trastorno psicótico."
+    },
+    {
+        "code": "F116",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, síndrome amnésico."
+    },
+    {
+        "code": "F117",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F118",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F119",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de opiáceos, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F12",
+        "name": "Trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F120",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, intoxicación aguda."
+    },
+    {
+        "code": "F121",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, uso nocivo."
+    },
+    {
+        "code": "F122",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, síndrome de dependencia."
+    },
+    {
+        "code": "F123",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, estado de abstinencia."
+    },
+    {
+        "code": "F124",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F125",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, trastorno psicótico."
+    },
+    {
+        "code": "F126",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, síndrome amnésico."
+    },
+    {
+        "code": "F127",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F128",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F129",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cannabinoides, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F130",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, intoxicación aguda."
+    },
+    {
+        "code": "F131",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, uso nocivo."
+    },
+    {
+        "code": "F132",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, síndrome de dependencia."
+    },
+    {
+        "code": "F133",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, estado de abstinencia."
+    },
+    {
+        "code": "F134",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F135",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, trastorno psicótico."
+    },
+    {
+        "code": "F136",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, síndrome amnésico."
+    },
+    {
+        "code": "F137",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F138",
+        "name": "Trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F139",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de sedantes o hipnóticos, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F140",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, intoxicación aguda."
+    },
+    {
+        "code": "F141",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, uso nocivo."
+    },
+    {
+        "code": "F142",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, síndrome de dependencia."
+    },
+    {
+        "code": "F143",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, estado de abstinencia."
+    },
+    {
+        "code": "F144",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F145",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, trastorno psicótico."
+    },
+    {
+        "code": "F146",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, síndrome amnésico."
+    },
+    {
+        "code": "F147",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F148",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F149",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de cocaína, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F150",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, intoxicación aguda."
+    },
+    {
+        "code": "F151",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, uso nocivo."
+    },
+    {
+        "code": "F152",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, síndrome de dependencia."
+    },
+    {
+        "code": "F153",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, estado de abstinencia."
+    },
+    {
+        "code": "F154",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F155",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, trastorno psicótico."
+    },
+    {
+        "code": "F156",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, síndrome amnésico."
+    },
+    {
+        "code": "F157",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F158",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F159",
+        "name": " Trastornos mentales y del comportamiento debidos al uso de otros estimulantes, incluida la cafeína, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F160",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, intoxicación aguda."
+    },
+    {
+        "code": "F161",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, uso nocivo."
+    },
+    {
+        "code": "F162",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, síndrome de dependencia."
+    },
+    {
+        "code": "F163",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, estado de abstinencia."
+    },
+    {
+        "code": "F164",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F165",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, trastorno psicótico."
+    },
+    {
+        "code": "F166",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, síndrome amnésico."
+    },
+    {
+        "code": "F167",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F168",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F169",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de alucinógenos, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F170",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, intoxicación aguda."
+    },
+    {
+        "code": "F171",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, uso nocivo."
+    },
+    {
+        "code": "F172",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, síndrome de dependencia."
+    },
+    {
+        "code": "F173",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, estado de abstinencia."
+    },
+    {
+        "code": "F174",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F175",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, trastorno psicótico."
+    },
+    {
+        "code": "F176",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, síndrome amnésico."
+    },
+    {
+        "code": "F177",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F178",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F179",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de tabaco, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F180",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, intoxicación aguda."
+    },
+    {
+        "code": "F181",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, uso nocivo."
+    },
+    {
+        "code": "F182",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, síndrome de dependencia."
+    },
+    {
+        "code": "F183",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, estado de abstinencia."
+    },
+    {
+        "code": "F184",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F185",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, trastorno psicótico."
+    },
+    {
+        "code": "F186",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, síndrome amnésico."
+    },
+    {
+        "code": "F187",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F188",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F189",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de disolventes volátiles, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F190",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, intoxicación aguda."
+    },
+    {
+        "code": "F191",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, uso nocivo."
+    },
+    {
+        "code": "F192",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, síndrome de dependencia."
+    },
+    {
+        "code": "F193",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, estado de abstinencia."
+    },
+    {
+        "code": "F194",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, estado de abstinencia con delirio."
+    },
+    {
+        "code": "F195",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, trastorno psicótico."
+    },
+    {
+        "code": "F196",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, síndrome amnésico."
+    },
+    {
+        "code": "F197",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, trastorno psicótico residual y de comienzo tardío."
+    },
+    {
+        "code": "F198",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, otros trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "F199",
+        "name": "Trastornos mentales y del comportamiento debidos al uso de múltiples drogas y al uso de otras sustancias psicoactivas, trastorno mental y del comportamiento, no especificado."
+    },
+    {
+        "code": "F200",
+        "name": "Esquizofrenia paranoide."
+    },
+    {
+        "code": "F201",
+        "name": "Esquizofrenia hebefrenica."
+    },
+    {
+        "code": "F202",
+        "name": "Esquizofrenia catatónica."
+    },
+    {
+        "code": "F203",
+        "name": "Esquizofrenia indiferenciada."
+    },
+    {
+        "code": "F204",
+        "name": "Depresión postesquizofrenica."
+    },
+    {
+        "code": "F205",
+        "name": "Esquizofrenia residual."
+    },
+    {
+        "code": "F206",
+        "name": "Esquizofrenia simple."
+    },
+    {
+        "code": "F208",
+        "name": "Otras esquizofrenias."
+    },
+    {
+        "code": "F209",
+        "name": "Esquizofrenia no especificada."
+    },
+    {
+        "code": "F21x",
+        "name": "Trastorno esquizotipico."
+    },
+    {
+        "code": "F220",
+        "name": "Trastorno delirante."
+    },
+    {
+        "code": "F228",
+        "name": "Otros trastornos delirantes persistentes."
+    },
+    {
+        "code": "F229",
+        "name": "Trastorno delirante persistente, no especificado."
+    },
+    {
+        "code": "F230",
+        "name": "Trastorno psicótico agudo polimorfo, sin síntomas de esquizofrenia."
+    },
+    {
+        "code": "F231",
+        "name": "Trastorno psicótico agudo polimorfo, con síntomas de esquizofrenia."
+    },
+    {
+        "code": "F232",
+        "name": "Trastorno psicótico agudo de tipo esquizofrénico."
+    },
+    {
+        "code": "F233",
+        "name": "Otro trastorno psicótico agudo, con predominio de ideas delirantes."
+    },
+    {
+        "code": "F238",
+        "name": "Otros trastornos psicóticos agudos y transitorios."
+    },
+    {
+        "code": "F239",
+        "name": "Trastorno psicótico agudo y transitorio, no especificado."
+    },
+    {
+        "code": "F24x",
+        "name": "Trastorno delirante inducido."
+    },
+    {
+        "code": "F250",
+        "name": "Trastorno esquizoafectivo de tipo maniaco."
+    },
+    {
+        "code": "F251",
+        "name": "Trastorno esquizoafectivo de tipo depresivo."
+    },
+    {
+        "code": "F252",
+        "name": "Trastorno esquizoafectivo de tipo mixto."
+    },
+    {
+        "code": "F258",
+        "name": "Otros trastornos esquizoafectivos."
+    },
+    {
+        "code": "F259",
+        "name": "Trastorno esquizoafectivo, no especificado."
+    },
+    {
+        "code": "F28x",
+        "name": "Otros trastornos psicóticos no orgánicos."
+    },
+    {
+        "code": "F29x",
+        "name": "Psicosis de origen no orgánico, no especificada."
+    },
+    {
+        "code": "F300",
+        "name": "Hipomanía."
+    },
+    {
+        "code": "F301",
+        "name": "Manía sin síntomas psicóticos."
+    },
+    {
+        "code": "F302",
+        "name": "Manía con síntomas psicóticos."
+    },
+    {
+        "code": "F308",
+        "name": "Otros episodios maniacos."
+    },
+    {
+        "code": "F309",
+        "name": "Episodio maniaco no especificado."
+    },
+    {
+        "code": "F310",
+        "name": "Trastorno afectivo bipolar, episodio hipomaniaco presente."
+    },
+    {
+        "code": "F311",
+        "name": "Trastorno afectivo bipolar, episodio maniaco presente sin síntomas psicóticos."
+    },
+    {
+        "code": "F312",
+        "name": "Trastorno afectivo bipolar, episodio maniaco presente con síntomas psicóticos."
+    },
+    {
+        "code": "F313",
+        "name": "Trastorno afectivo bipolar, episodio depresivo presente leve o moderado."
+    },
+    {
+        "code": "F314",
+        "name": "Trastorno afectivo bipolar, episodio depresivo grave presente sin síntomas psicóticos."
+    },
+    {
+        "code": "F315",
+        "name": "Trastorno afectivo bipolar, episodio depresivo grave presente con síntomas psicóticos."
+    },
+    {
+        "code": "F316",
+        "name": "Trastorno afectivo bipolar, episodio mixto presente."
+    },
+    {
+        "code": "F317",
+        "name": "Trastorno afectivo bipolar, actualmente en remisión."
+    },
+    {
+        "code": "F318",
+        "name": "Otros trastornos afectivos bipolares."
+    },
+    {
+        "code": "F319",
+        "name": "Trastorno afectivo bipolar, no especificado."
+    },
+    {
+        "code": "F320",
+        "name": "Episodio depresivo leve."
+    },
+    {
+        "code": "F321",
+        "name": "Episodio depresivo moderado."
+    },
+    {
+        "code": "F322",
+        "name": "Episodio depresivo grave sin síntomas psicóticos."
+    },
+    {
+        "code": "F323",
+        "name": "Episodio depresivo grave con síntomas psicóticos."
+    },
+    {
+        "code": "F328",
+        "name": "Otros episodios depresivos."
+    },
+    {
+        "code": "F329",
+        "name": "Episodio depresivo, no especificado."
+    },
+    {
+        "code": "F330",
+        "name": "Trastorno depresivo recurrente, episodio leve."
+    },
+    {
+        "code": "F331",
+        "name": "Trastorno depresivo recurrente, episodio moderado presente."
+    },
+    {
+        "code": "F332",
+        "name": "Trastorno depresivo recurrente, episodio depresivo grave presente sin síntomas psicótico."
+    },
+    {
+        "code": "F333",
+        "name": "Trastorno depresivo recurrente, episodio depresivo grave presente, con síntomas psicóticos."
+    },
+    {
+        "code": "F334",
+        "name": "Trastorno depresivo recurrente actualmente en."
+    },
+    {
+        "code": "F338",
+        "name": "Otros trastornos depresivos recurrentes."
+    },
+    {
+        "code": "F339",
+        "name": "Trastorno depresivo recurrente, no especificado."
+    },
+    {
+        "code": "F340",
+        "name": "Ciclotimia."
+    },
+    {
+        "code": "F341",
+        "name": "Distimia."
+    },
+    {
+        "code": "F348",
+        "name": "Otros trastornos del humor [afectivos] persistentes."
+    },
+    {
+        "code": "F349",
+        "name": "Trastorno persistente del humor (afectivo), no especificado."
+    },
+    {
+        "code": "F380",
+        "name": "Otros trastornos del humor [afectivos], aislados."
+    },
+    {
+        "code": "F381",
+        "name": "Otros trastornos del humor [afectivos], recurrentes."
+    },
+    {
+        "code": "F388",
+        "name": "Otros trastornos del humor [afectivos], especificados."
+    },
+    {
+        "code": "F431",
+        "name": "Trastorno de estrés postraumático."
+    },
+    {
+        "code": "F39x",
+        "name": "Trastorno del humo sin especificación."
+    },
+    {
+        "code": "F400",
+        "name": "Agorafobia."
+    },
+    {
+        "code": "F401",
+        "name": "Fobias sociales."
+    },
+    {
+        "code": "F402",
+        "name": "Fobias especificas (aisladas)."
+    },
+    {
+        "code": "F408",
+        "name": "Otros trastornos fóbicos de ansiedad."
+    },
+    {
+        "code": "F409",
+        "name": "Trastorno fóbico de ansiedad, no especificado."
+    },
+    {
+        "code": "F410",
+        "name": "Trastorno de pánico [ansiedad paroxística episódica]."
+    },
+    {
+        "code": "F411",
+        "name": "Trastorno de ansiedad generalizada."
+    },
+    {
+        "code": "F412",
+        "name": "Trastorno mixto de ansiedad y depresión."
+    },
+    {
+        "code": "F413",
+        "name": "Otros trastornos de ansiedad mixtos."
+    },
+    {
+        "code": "F418",
+        "name": "Otros trastornos de ansiedad especificados."
+    },
+    {
+        "code": "F419",
+        "name": "Trastorno de ansiedad, no especificado."
+    },
+    {
+        "code": "F420",
+        "name": "Predominio de pensamientos o rumiaciones obsesivas."
+    },
+    {
+        "code": "F421",
+        "name": "Predominio de actos compulsivos [rituales obsesivos]."
+    },
+    {
+        "code": "F422",
+        "name": "Actos e ideas obsesivas mixtos."
+    },
+    {
+        "code": "F428",
+        "name": "Otros trastornos obsesivo - compulsivos."
+    },
+    {
+        "code": "F429",
+        "name": "Trastorno obsesivo - compulsivo, no especificado."
+    },
+    {
+        "code": "F430",
+        "name": "Reacción a estrés agudo."
+    },
+    {
+        "code": "F432",
+        "name": "Trastornos de adaptación."
+    },
+    {
+        "code": "F438",
+        "name": "Otras reacciones al estrés grave."
+    },
+    {
+        "code": "F439",
+        "name": "Reacción al estrés grave, no especificada."
+    },
+    {
+        "code": "F440",
+        "name": "Amnesia disociativa."
+    },
+    {
+        "code": "F441",
+        "name": "Fuga disociativa."
+    },
+    {
+        "code": "F442",
+        "name": "Estupor disociativo."
+    },
+    {
+        "code": "F443",
+        "name": "Trastornos de trance y de posesión."
+    },
+    {
+        "code": "F444",
+        "name": "Trastornos disociativos del movimiento."
+    },
+    {
+        "code": "F445",
+        "name": "Convulsiones disociativas."
+    },
+    {
+        "code": "F446",
+        "name": "Anestesia disociativa y perdida sensorial."
+    },
+    {
+        "code": "F447",
+        "name": "Trastornos disociativos mixtos [y de conversión]."
+    },
+    {
+        "code": "F448",
+        "name": "Otros trastornos disociativos [de conversión]."
+    },
+    {
+        "code": "F449",
+        "name": "Trastorno disociativo (de conversión), no especificado."
+    },
+    {
+        "code": "F450",
+        "name": "Trastorno de somatización."
+    },
+    {
+        "code": "F451",
+        "name": "Trastorno somatomorfo indiferenciado."
+    },
+    {
+        "code": "F452",
+        "name": "Trastorno hipocondriaco."
+    },
+    {
+        "code": "F453",
+        "name": "Disfunción autonómica somatomorfa."
+    },
+    {
+        "code": "F454",
+        "name": "Trastorno de dolor persistente somatomorfo."
+    },
+    {
+        "code": "F458",
+        "name": "Otros trastornos somatomorfos trastorno ni por enfermedad orgánicos."
+    },
+    {
+        "code": "F459",
+        "name": "Trastorno somatomorfo, no especificado."
+    },
+    {
+        "code": "F480",
+        "name": "Neurastenia."
+    },
+    {
+        "code": "F481",
+        "name": "Síndrome de despersonalización y desvinculación de la realidad."
+    },
+    {
+        "code": "F488",
+        "name": "Otros trastornos neuróticos especificados."
+    },
+    {
+        "code": "F489",
+        "name": "Trastorno neurótico, no especificado."
+    },
+    {
+        "code": "F500",
+        "name": "Anorexia nerviosa."
+    },
+    {
+        "code": "F501",
+        "name": "Anorexia nerviosa atípica."
+    },
+    {
+        "code": "F502",
+        "name": "Bulimia nerviosa."
+    },
+    {
+        "code": "F503",
+        "name": "Bulimia nerviosa atípica."
+    },
+    {
+        "code": "F504",
+        "name": "Hiperfagia asociada con otras alteraciones psicológicas."
+    },
+    {
+        "code": "F505",
+        "name": "Vómitos asociados con otras alteraciones psicológicas."
+    },
+    {
+        "code": "F508",
+        "name": "Otros trastornos de la ingestión de alimentos."
+    },
+    {
+        "code": "F509",
+        "name": "Trastorno de la ingestión de alimentos, no especificado."
+    },
+    {
+        "code": "F510",
+        "name": "Insomnio no orgánico."
+    },
+    {
+        "code": "F511",
+        "name": "Hipersomnio no orgánico."
+    },
+    {
+        "code": "F512",
+        "name": "Trastorno no orgánico del ciclo sueno - vigilia."
+    },
+    {
+        "code": "F513",
+        "name": "Sonambulismo."
+    },
+    {
+        "code": "F514",
+        "name": "Terrores del sueño [terrores nocturnos]."
+    },
+    {
+        "code": "F515",
+        "name": "Pesadillas."
+    },
+    {
+        "code": "F518",
+        "name": "Otros trastornos no orgánicos del sueño."
+    },
+    {
+        "code": "F519",
+        "name": "Trastorno no orgánico de sueño, no especificado."
+    },
+    {
+        "code": "F520",
+        "name": "Falta o perdida del deseo sexual."
+    },
+    {
+        "code": "F521",
+        "name": "Aversión al sexo y falta de goce sexual."
+    },
+    {
+        "code": "F522",
+        "name": "Falla de la respuesta genital."
+    },
+    {
+        "code": "F523",
+        "name": "Disfunción orgásmica."
+    },
+    {
+        "code": "F524",
+        "name": "Eyaculación precoz."
+    },
+    {
+        "code": "F525",
+        "name": "Vaginismo no orgánico."
+    },
+    {
+        "code": "F526",
+        "name": "Dispareunia no orgánica."
+    },
+    {
+        "code": "F527",
+        "name": "Impulso sexual excesivo."
+    },
+    {
+        "code": "F528",
+        "name": "Otras disfunciones sexuales, no ocasionadas por."
+    },
+    {
+        "code": "F529",
+        "name": "Disfunción sexual no ocasionada por trastorno ni por enfermedad orgánicos, no especifica."
+    },
+    {
+        "code": "F530",
+        "name": "Trastornos mentales y del comportamiento leves, asociados con el puerperio, no clasifica."
+    },
+    {
+        "code": "F531",
+        "name": "Trastornos mentales y del comportamiento graves, asociados con el puerperio, no clasificados."
+    },
+    {
+        "code": "F538",
+        "name": "Otros trastornos mentales y del comportamiento asociados con el puerperio, no clasificados."
+    },
+    {
+        "code": "F539",
+        "name": "Trastorno mental puerperal, no especificado."
+    },
+    {
+        "code": "F54x",
+        "name": "Factores psicológicos y del comportamiento asociados con trastornos o enfermedad."
+    },
+    {
+        "code": "F55x",
+        "name": "Abuso de sustancias que no producen dependencia."
+    },
+    {
+        "code": "F59x",
+        "name": "Síndromes del comportamiento asociados con alteraciones fisiológicas y factores."
+    },
+    {
+        "code": "F600",
+        "name": "Trastorno paranoide de la personalidad."
+    },
+    {
+        "code": "F601",
+        "name": "Trastorno esquizoide de la personalidad."
+    },
+    {
+        "code": "F602",
+        "name": "Trastorno asocial de la personalidad."
+    },
+    {
+        "code": "F603",
+        "name": "Trastorno de la personalidad emocionalmente inestable."
+    },
+    {
+        "code": "F604",
+        "name": "Trastorno histriónico de la personalidad."
+    },
+    {
+        "code": "F605",
+        "name": "Trastorno anancastico de la personalidad."
+    },
+    {
+        "code": "F606",
+        "name": "Trastorno de la personalidad ansiosa (evasiva, elusiva)."
+    },
+    {
+        "code": "F607",
+        "name": "Trastorno de la personalidad dependiente."
+    },
+    {
+        "code": "F608",
+        "name": "Otros trastornos específicos de la personalidad."
+    },
+    {
+        "code": "F609",
+        "name": "Trastorno de la personalidad sin especificación."
+    },
+    {
+        "code": "F61x",
+        "name": "Trastornos mixtos y otros trastornos de la personalidad."
+    },
+    {
+        "code": "F620",
+        "name": "Cambio perdurable de la personalidad después de una experiencia catastrófica."
+    },
+    {
+        "code": "F621",
+        "name": "Cambio perdurable de la personalidad Cambio perdurable de la personalidad."
+    },
+    {
+        "code": "F628",
+        "name": "Otros cambios perdurables de la personalidad."
+    },
+    {
+        "code": "F629",
+        "name": "Cambio perdurable de la personalidad, no especificado."
+    },
+    {
+        "code": "F630",
+        "name": "Juego patológico."
+    },
+    {
+        "code": "F631",
+        "name": "Piromanía."
+    },
+    {
+        "code": "F632",
+        "name": "Hurto patológico [cleptomanía]."
+    },
+    {
+        "code": "F633",
+        "name": "Tricotilomanía."
+    },
+    {
+        "code": "F638",
+        "name": "Otros trastornos de los hábitos y de los impulsos."
+    },
+    {
+        "code": "F639",
+        "name": "Trastorno de los hábitos y de los impulsos, no especificado."
+    },
+    {
+        "code": "F640",
+        "name": "Transexualismo."
+    },
+    {
+        "code": "F641",
+        "name": "Travestismo de rol dual."
+    },
+    {
+        "code": "F642",
+        "name": "Trastorno de la identidad de género en la niñez."
+    },
+    {
+        "code": "F648",
+        "name": "Otros trastornos de la identidad de genero."
+    },
+    {
+        "code": "F649",
+        "name": "Trastorno de la identidad de género, no especificado."
+    },
+    {
+        "code": "F650",
+        "name": "Fetichismo."
+    },
+    {
+        "code": "F651",
+        "name": "Travestismo fetichista."
+    },
+    {
+        "code": "F652",
+        "name": "Exhibicionismo."
+    },
+    {
+        "code": "F653",
+        "name": "Voyerismo."
+    },
+    {
+        "code": "F654",
+        "name": "Pedofilia."
+    },
+    {
+        "code": "F655",
+        "name": "Sadomasoquismo."
+    },
+    {
+        "code": "F656",
+        "name": "Trastornos múltiples de la preferencia sexual."
+    },
+    {
+        "code": "F658",
+        "name": "Otros trastornos de la preferencia sexual."
+    },
+    {
+        "code": "F659",
+        "name": "Trastorno de la preferencia sexual, no especificado."
+    },
+    {
+        "code": "F660",
+        "name": "Trastorno de la maduración sexual."
+    },
+    {
+        "code": "F661",
+        "name": "Orientación sexual egodistónica."
+    },
+    {
+        "code": "F662",
+        "name": "Trastorno de la relación sexual."
+    },
+    {
+        "code": "F668",
+        "name": "Otros trastornos del desarrollo psicosexual."
+    },
+    {
+        "code": "F669",
+        "name": "Trastornos del desarrollo psicosexual, no especificado."
+    },
+    {
+        "code": "F680",
+        "name": "Elaboración de síntomas físicos por causas psicológicas."
+    },
+    {
+        "code": "F681",
+        "name": "Producción intencional o simulación de síntomas o de incapacidades, tanto físicas como."
+    },
+    {
+        "code": "F688",
+        "name": "Otros trastornos especificados de la personalidad y del comportamiento en adultos."
+    },
+    {
+        "code": "F700",
+        "name": "Retraso mental leve, deterioro del comportamiento nulo o mínimo."
+    },
+    {
+        "code": "F701",
+        "name": "Retraso mental leve, deterioro del comportamiento significativo, que requiere atención."
+    },
+    {
+        "code": "F708",
+        "name": "Retraso mental leve, otros deterioros del comportamiento."
+    },
+    {
+        "code": "F709",
+        "name": "Retraso mental leve por deterioro del comportamiento de grado no especificado."
+    },
+    {
+        "code": "F710",
+        "name": "Retraso mental moderado, deterioro del comportamiento nulo o mínimo."
+    },
+    {
+        "code": "F711",
+        "name": "Retraso mental moderado, deterioro del comporcomportamiento significativo, que requiere atención."
+    },
+    {
+        "code": "F718",
+        "name": "Retraso mental moderado, otros deterioros del comportamiento."
+    },
+    {
+        "code": "F719",
+        "name": "Retraso mental moderado por deterioro del comportamiento de grado no especificadoportamiento de grado no especificado."
+    },
+    {
+        "code": "F720",
+        "name": "Retraso mental grave por deterioro del comportamiento de grado no especificado."
+    },
+    {
+        "code": "F721",
+        "name": "Retraso mental grave, deterioro del comportamiento significativo, que requiere atención."
+    },
+    {
+        "code": "F728",
+        "name": "Retraso mental grave, otros deterioros del comportamiento."
+    },
+    {
+        "code": "F729",
+        "name": "Retraso mental grave, deterioro del comportamiento de grado no especificado."
+    },
+    {
+        "code": "F730",
+        "name": "Retraso mental profundo, deterioro del comportamiento nulo o mínimo."
+    },
+    {
+        "code": "F731",
+        "name": "Retraso mental profundo, deterioro del comportamiento significativo, que requiere atención."
+    },
+    {
+        "code": "F738",
+        "name": "Retraso mental profundo, otros deterioros del comportamiento."
+    },
+    {
+        "code": "F739",
+        "name": "Retraso mental profundo, deterioro del comportamiento de grado no especificado."
+    },
+    {
+        "code": "F780",
+        "name": "Otros tipos de retraso mental, deterioro del comportamiento nulo o mínimo."
+    },
+    {
+        "code": "F781",
+        "name": "Otros tipos de retraso mental, deterioro del Comportamiento significativo, que requiere."
+    },
+    {
+        "code": "F788",
+        "name": "Otros tipos de retraso mental, otros deterioros del Comportamiento."
+    },
+    {
+        "code": "F789",
+        "name": "Otros tipos de retraso mental, deterioro del Comportamiento de grado no especificado."
+    },
+    {
+        "code": "F800",
+        "name": "Trastorno especifico de la pronunciación."
+    },
+    {
+        "code": "F801",
+        "name": "Trastorno del lenguaje expresivo."
+    },
+    {
+        "code": "F802",
+        "name": "Trastorno de la recepción del lenguaje."
+    },
+    {
+        "code": "F803",
+        "name": "Afasia adquirida con epilepsia [landau - kleffner]."
+    },
+    {
+        "code": "F808",
+        "name": "Otros trastornos del desarrollo del habla y del lenguaje."
+    },
+    {
+        "code": "F809",
+        "name": "Trastornos específicos del desarrollo del habla y del lenguaje sin especificación."
+    },
+    {
+        "code": "F810",
+        "name": "Trastorno especifico de la lectura."
+    },
+    {
+        "code": "F811",
+        "name": "Trastorno específico del deletreo [ortografía]."
+    },
+    {
+        "code": "F812",
+        "name": "Trastorno especifico de las habilidades aritméticas."
+    },
+    {
+        "code": "F813",
+        "name": "Trastorno mixto de las habilidades escolares."
+    },
+    {
+        "code": "F818",
+        "name": "Otros trastornos del desarrollo de las habilidades."
+    },
+    {
+        "code": "F819",
+        "name": "Trastornos específicos del desarrollo del aprendizaje Escolar sin especificación."
+    },
+    {
+        "code": "F82x",
+        "name": "Trastorno específico del desarrollo psicomotor."
+    },
+    {
+        "code": "F83x",
+        "name": "Trastornos específicos mixtos del desarrollo."
+    },
+    {
+        "code": "F840",
+        "name": "Autismo en la niñez."
+    },
+    {
+        "code": "F841",
+        "name": "Autismo atipico."
+    },
+    {
+        "code": "F842",
+        "name": "Síndrome de Rett."
+    },
+    {
+        "code": "F843",
+        "name": "Otro trastorno desintegrativo de la niñez."
+    },
+    {
+        "code": "F844",
+        "name": " Trastorno hiperactivo asociado con retraso mental y Movimientos estereotipados."
+    },
+    {
+        "code": "F845",
+        "name": "Síndrome de asperger."
+    },
+    {
+        "code": "F848",
+        "name": "Otros trastornos generalizados del desarrollo."
+    },
+    {
+        "code": "F849",
+        "name": "Trastorno generalizado del desarrollo, no especificado."
+    },
+    {
+        "code": "F88x",
+        "name": "Otros trastornos del desarrollo psicológico."
+    },
+    {
+        "code": "F900",
+        "name": "Perturbación de la actividad y de la atención."
+    },
+    {
+        "code": "F908",
+        "name": "Otros trastornos hipercinéticos."
+    },
+    {
+        "code": "F909",
+        "name": "Trastorno hipercinético, no especificado."
+    },
+    {
+        "code": "F910",
+        "name": "Trastorno de la conducta limitado al contexto familiar."
+    },
+    {
+        "code": "F911",
+        "name": "Trastorno de la conducta insociable."
+    },
+    {
+        "code": "F912",
+        "name": "Trastorno de la conducta sociable."
+    },
+    {
+        "code": "F913",
+        "name": "Trastorno opositor desafiante."
+    },
+    {
+        "code": "F918",
+        "name": "Otros trastornos de la conducta."
+    },
+    {
+        "code": "F919",
+        "name": "Trastorno de la conducta, no especificado."
+    },
+    {
+        "code": "F920",
+        "name": "Trastorno depresivo de la conducta."
+    },
+    {
+        "code": "F928",
+        "name": "Otros trastornos mixtos de la conducta y de las emociones."
+    },
+    {
+        "code": "F929",
+        "name": "Trastorno mixto de la conducta y de las emociones, no especificado."
+    },
+    {
+        "code": "F930",
+        "name": "Trastorno de ansiedad de separación en la niñez."
+    },
+    {
+        "code": "F931",
+        "name": "Trastorno de ansiedad de separación en la niñez."
+    },
+    {
+        "code": "F932",
+        "name": "Trastorno de ansiedad social en la niñez."
+    },
+    {
+        "code": "F933",
+        "name": "Trastorno de rivalidad entre hermanos."
+    },
+    {
+        "code": "F938",
+        "name": "Otros trastornos emocionales en la niñez."
+    },
+    {
+        "code": "F939",
+        "name": "Trastorno de las emociones de comienzo habitual en la Infancia, no especificado."
+    },
+    {
+        "code": "F940",
+        "name": "Mutismo electivo."
+    },
+    {
+        "code": "F941",
+        "name": "Trastorno de vinculación reactiva en la niñez."
+    },
+    {
+        "code": "F942",
+        "name": "Trastorno de vinculación desinhibida en la niñez."
+    },
+    {
+        "code": "F948",
+        "name": "Otros trastornos del comportamiento social en la niñez."
+    },
+    {
+        "code": "F949",
+        "name": "Trastorno del comportamiento social en la niñez, no Especificado."
+    },
+    {
+        "code": "F950",
+        "name": "Trastorno por tic transitorio."
+    },
+    {
+        "code": "F951",
+        "name": "Trastorno por tic motor o vocal crónico."
+    },
+    {
+        "code": "F952",
+        "name": "Trastorno por tics motores y vocales múltiples combinados [de la tourette]."
+    },
+    {
+        "code": "F958",
+        "name": "Otros trastornos por tics."
+    },
+    {
+        "code": "F959",
+        "name": "Trastorno por tic, no especificado."
+    },
+    {
+        "code": "F980",
+        "name": "Enuresis no orgánica."
+    },
+    {
+        "code": "F981",
+        "name": "Encopresis no orgánica."
+    },
+    {
+        "code": "F982",
+        "name": "Trastorno de la ingestión alimentaria en la infancia y la niñez."
+    },
+    {
+        "code": "F983",
+        "name": "Pica en la infancia y la niñez."
+    },
+    {
+        "code": "F984",
+        "name": "Trastornos de los movimientos estereotipados."
+    },
+    {
+        "code": "F985",
+        "name": "Tartamudez [espasmofemia]."
+    },
+    {
+        "code": "F986",
+        "name": "Farfulleo."
+    },
+    {
+        "code": "F988",
+        "name": "comportamiento que aparecen habitualmente en la niñez."
+    },
+    {
+        "code": "F989",
+        "name": "Trastornos no especificados, emocionales y del comportamiento, que aparecen habitualmente."
+    },
+    {
+        "code": "X60",
+        "name": "Envenenamiento autoinfligido intencionalmente por y exposición a analgésicos no narcóticos, antipiréticos y antirreumáticos."
+    },
+    {
+        "code": "X61",
+        "name": "Envenenamiento autoinfligido intencionalmente por y Exposición a drogas antiepilépticas, sedantes, hipnóticas, anti parkinsonianas y psicotrópicas no clasificadas en otra parte."
+    },
+    {
+        "code": "X62",
+        "name": "Envenenamiento autoinfligido intencionalmente por, y exposición a narcóticos y psicodislepticos [alucinógenos], no clasificados en otra parte."
+    },
+    {
+        "code": "X63",
+        "name": "Envenenamiento autoinfligido intencionalmente por, y exposición a otras drogas que actúan sobre el sistema nervioso autónomo."
+    },
+    {
+        "code": "X64",
+        "name": "Envenenamiento autoinfligido intencionalmente por, y exposición a otras drogas, medicamentos y sustancias biológicas, y los no especificado."
+    },
+    {
+        "code": "X65",
+        "name": "Envenenamiento autoinfligido intencionalmente por, y exposición al alcohol."
+    },
+    {
+        "code": "X66",
+        "name": "Envenenamiento autoinfligido intencionalmente por y exposición a disolventes orgánicos e hidrocarburos halogenados y sus vapores."
+    },
+    {
+        "code": "X67",
+        "name": "Envenenamiento autoinfligido intencionalmente por, y exposición a otros gases y vapores."
+    },
+    {
+        "code": "X68",
+        "name": "Envenenamiento autoinfligido intencionalmente por, y exposición a plaguicidas."
+    },
+    {
+        "code": "X70",
+        "name": "Lesión autoinfligida intencionalmente por ahorcamiento, estrangulamiento o sofocación."
+    },
+    {
+        "code": "X71",
+        "name": "Lesión autoinfligida intencionalmente por ahogamiento y sumersión."
+    },
+    {
+        "code": "X72",
+        "name": "Lesión autoinfligida intencionalmente por disparo."
+    },
+    {
+        "code": "X73",
+        "name": "Lesión autoinfligida intencionalmente por disparo de rifle, escopeta y arma larga."
+    },
+    {
+        "code": "X74",
+        "name": "Lesión autoinfligida intencionalmente por disparo de otras armas de fuego, y las no especificadas."
+    },
+    {
+        "code": "X75",
+        "name": "Lesión autoinfligida intencionalmente por material explosivo."
+    },
+    {
+        "code": "X76",
+        "name": "Lesión autoinfligida intencionalmente por humo, fuego y llamas."
+    },
+    {
+        "code": "X77",
+        "name": "Lesión autoinfligida intencionalmente por vapor de agua, vapores y objetos calientes."
+    },
+    {
+        "code": "X78",
+        "name": "Lesión autoinfligida intencionalmente por objeto cortante."
+    },
+    {
+        "code": "X79",
+        "name": "Lesión autoinfligida intencionalmente por objeto romo o sin filo."
+    },
+    {
+        "code": "X80",
+        "name": "Lesión autoinfligida intencionalmente al saltar desde un lugar elevado."
+    },
+    {
+        "code": "X81",
+        "name": "Lesión autoinfligida intencionalmente por arrojarse o colocarse delante de objeto en movimiento."
+    },
+    {
+        "code": "X82",
+        "name": "Lesión autoinfligida intencionalmente por colisión de vehículo de motor."
+    },
+    {
+        "code": "X83",
+        "name": "Lesión autoinfligida intencionalmente por otros medios especificados."
+    },
+    {
+        "code": "T740",
+        "name": "Negligencia o abandono."
+    },
+    {
+        "code": "T741",
+        "name": "Abuso físico."
+    },
+    {
+        "code": "T742",
+        "name": "Abuso sexual."
+    },
+    {
+        "code": "T743",
+        "name": "Abuso psicológico."
+    },
+    {
+        "code": "T748",
+        "name": "Otros síndromes de maltrato (formas mixtas)."
+    },
+    {
+        "code": "T749",
+        "name": "Sindrome del maltrato no especificado."
+    },
+    {
+        "code": "Y041",
+        "name": "Agresión con fuerza corporal en institución residencial."
+    },
+    {
+        "code": "Y042",
+        "name": "Agresión con fuerza corporal en escuelas, otras instituciones y áreas administrativas publicas."
+    },
+    {
+        "code": "Y048",
+        "name": "Agresión con fuerza corporal en otro lugar especificado."
+    },
+    {
+        "code": "Y049",
+        "name": "Agresión con fuerza corporal en lugar no especificado."
+    },
+    {
+        "code": "Y050",
+        "name": "Agresión sexual con fuerza corporal en vivienda."
+    },
+    {
+        "code": "Y051",
+        "name": "Agresión sexual con fuerza corporal en institución residencial."
+    },
+    {
+        "code": "Y052",
+        "name": "Agresión sexual con fuerza corporal en escuelas, otras instituciones y áreas administrativas públicas."
+    },
+    {
+        "code": "Y058",
+        "name": "Agresión sexual con fuerza corporal en otro lugar especificado."
+    },
+    {
+        "code": "Y059",
+        "name": "Agresión sexual con fuerza corporal en lugar no especificado."
+    },
+    {
+        "code": "Y060",
+        "name": "Agresión sexual con fuerza corporal en vivienda."
+    },
+    {
+        "code": "Y061",
+        "name": "Negligencia y abandono por padre o madre."
+    },
+    {
+        "code": "Y062",
+        "name": "Negligencia y abandono por conocido o amigo."
+    },
+    {
+        "code": "Y068",
+        "name": "Negligencia y abandono por otra persona especificada."
+    },
+    {
+        "code": "Y070",
+        "name": "Síndrome de maltrato por esposo o pareja."
+    },
+    {
+        "code": "Y071",
+        "name": "Otros síndromes de maltrato por padre o madre."
+    },
+    {
+        "code": "Y072",
+        "name": "Otros síndromes de maltrato por conocido o amigo (bullying)."
+    },
+    {
+        "code": "Y073",
+        "name": "Otros síndromes de maltrato por autoridades oficiales."
+    },
+    {
+        "code": "Y078",
+        "name": "Otros síndromes de maltrato por otra persona especificada."
+    },
+    {
+        "code": "Y079",
+        "name": "Otros síndromes de maltrato por persona no especificada."
+    },
+    {
+        "code": "Y870",
+        "name": "Secuelas de lesiones autoinfligidas."
+    },
+    {
+        "code": "Y871",
+        "name": "Secuelas de agresiones."
+    },
+    {
+        "code": "R456",
+        "name": "Problemas relacionados con violencia."
+    },
+    {
+        "code": "Z046",
+        "name": "Examen psiquiátrico general solicitado por una autoridad."
+    },
+    {
+        "code": "Z133",
+        "name": "Examen de pesquisa especial para trastornos mentales y del comportamiento."
+    },
+    {
+        "code": "Z600",
+        "name": "Problemas relacionados con el ajuste a las transiciones del ciclo vital."
+    },
+    {
+        "code": "Z601",
+        "name": "Problemas relacionados con situación familiar atipica."
+    },
+    {
+        "code": "Z602",
+        "name": "Problemas relacionados con persona que vive sola."
+    },
+    {
+        "code": "Z603",
+        "name": "Problemas relacionados con la adaptación cultural."
+    },
+    {
+        "code": "Z604",
+        "name": "Problemas relacionado con la exclusión y rechazo."
+    },
+    {
+        "code": "Z605",
+        "name": "Problemas relacionados con la discriminación y persecución percibidas."
+    },
+    {
+        "code": "Z608",
+        "name": "Otros problemas relacionados con el ambiente social."
+    },
+    {
+        "code": "Z609",
+        "name": "Problema no especificado relacionado con el ambiente social."
+    },
+    {
+        "code": "Z610",
+        "name": "Problemas relacionados con la pérdida de relación afectiva en la infancia."
+    },
+    {
+        "code": "Z611",
+        "name": "Problemas relacionados con el alejamiento del hogar en la infancia."
+    },
+    {
+        "code": "Z612",
+        "name": "Problemas relacionados con alteración en el patrón de la relación familiar en la infancia."
+    },
+    {
+        "code": "Z613",
+        "name": "Problemas relacionados con eventos que llevaron a la perdida de la autoestima en la infancia."
+    },
+    {
+        "code": "Z614",
+        "name": "Problemas relacionados con el abuso sexual del niño por persona dentro del grupo de apoyo."
+    },
+    {
+        "code": "Z615",
+        "name": "Problemas relacionados con el abuso sexual del niño por persona ajena al grupo de apoyo."
+    },
+    {
+        "code": "Z616",
+        "name": "Problemas relacionados con el abuso físico del niño."
+    },
+    {
+        "code": "Z617",
+        "name": "Problemas relacionados con experiencias personales atemorizantes en la infancia."
+    },
+    {
+        "code": "Z618",
+        "name": "Problemas relacionados con otras experiencias negativas en la infancia."
+    },
+    {
+        "code": "Z619",
+        "name": "Problemas relacionados con experiencia negativa no especificada en la infancia."
+    },
+    {
+        "code": "Z620",
+        "name": "Problemas relacionados con la supervisión o el control inadecuado de los padres."
+    },
+    {
+        "code": "Z621",
+        "name": "Problemas relacionados con la sobreprotección de los padres."
+    },
+    {
+        "code": "Z622",
+        "name": "Problemas relacionados con la crianza en instituciones."
+    },
+    {
+        "code": "Z623",
+        "name": "Problemas relacionados con hostilidad y reproba- ción al niño."
+    },
+    {
+        "code": "Z624",
+        "name": "Abandono emocional del niño."
+    },
+    {
+        "code": "Z625",
+        "name": "Otros problemas relacionados con negligencia en la crianza del niño."
+    },
+    {
+        "code": "Z626",
+        "name": "Problemas relacionados con presiones inapropiadas de los padres y otras anormalidades en la calidad de la crianza."
+    },
+    {
+        "code": "Z628",
+        "name": "Otros problemas especificados y relacionados con la crianza del niño."
+    },
+    {
+        "code": "Z629",
+        "name": "Otros  problemas  relacionados  con  la  crianza  del niño (sistemas de creencias)."
+    },
+    {
+        "code": "Z630",
+        "name": "Problemas relación pareja esposos."
+    },
+    {
+        "code": "Z631",
+        "name": "Problemas en la relación con los padres políticos familiares."
+    },
+    {
+        "code": "Z632",
+        "name": "Problemas en relación con el soporte socio familiar."
+    },
+    {
+        "code": "Z633",
+        "name": "Ausencia de miembro de la familia."
+    },
+    {
+        "code": "Z634",
+        "name": "Desaparición o muerte de miembro de la familia."
+    },
+    {
+        "code": "Z635",
+        "name": "Problemas relacionados con la ruptura familiar por separación o divorcio."
+    },
+    {
+        "code": "Z636",
+        "name": "Familiar dependiente necesitado de cuidado en el hogar."
+    },
+    {
+        "code": "Z637",
+        "name": "Problemas relacionados con otros  hechos estresantes que afectan a la familia y la casa."
+    },
+    {
+        "code": "Z638",
+        "name": "Otros problemas especificados relacionados con el grupo primario de apoyo."
+    },
+    {
+        "code": "Z639",
+        "name": "Problema no especificado relacionados con el gru- po primario de apoyo."
+    },
+    {
+        "code": "Z640",
+        "name": "Problemas relacionados con embarazo no deseado ."
+    },
+    {
+        "code": "Z641",
+        "name": "Problemas relacionados con la multiparidad."
+    },
+    {
+        "code": "Z642",
+        "name": "Problemas relacionados con la solicitud o aceptación de intervenciones físicas, nutricionales y químicas, conociendo su riesgo y peligro."
+    },
+    {
+        "code": "Z643",
+        "name": "Problemas relacionados con la solicitud o aceptación de intervenciones psicológicas o de la conducta, conociendo su riesgo y peligro."
+    },
+    {
+        "code": "Z644",
+        "name": "Problemas relacionados con el desacuerdo con consejeros."
+    },
+    {
+        "code": "Z650",
+        "name": "Problemas relacionados con culpabilidad en procedimientos civiles o criminales sin prisión."
+    },
+    {
+        "code": "Z651",
+        "name": "Problemas relacionados con prisión y otro encarcelamiento."
+    },
+    {
+        "code": "Z652",
+        "name": "Problemas relacionados con la liberación de la prisión."
+    },
+    {
+        "code": "Z653",
+        "name": "Problemas relacionados con otras circunstancias legales."
+    },
+    {
+        "code": "Z654",
+        "name": "Víctima de crimen o terrorismo, incluyendo tortura."
+    },
+    {
+        "code": "Z655",
+        "name": "Exposición a desastre, guerra u otras hostilidades."
+    },
+    {
+        "code": "Z658",
+        "name": "Otros problemas especificados relacionados con."
+    },
+    {
+        "code": "Z659",
+        "name": "Problemas relacionados con circunstancias psicosociales (problemas en el desarrollo)."
+    },
+    {
+        "code": "Z720",
+        "name": "Problemas relacionados con el uso de tabaco."
+    },
+    {
+        "code": "Z721",
+        "name": "Problemas relacionados con el uso de alcohol."
+    },
+    {
+        "code": "Z722",
+        "name": "Problemas relacionados con el uso de drogas."
+    },
+    {
+        "code": "Z728",
+        "name": "Otros problemas relacionados con el estilo de vida."
+    },
+    {
+        "code": "Z733",
+        "name": "Problemas relacionados con déficit en habilidades sociales."
+    },
+    {
+        "code": "Z734",
+        "name": "Problemas relacionados con habilidades sociales inadecuadas."
+    },
+    {
+        "code": "96150.01",
+        "name": "Tamizaje en Violencia."
+    },
+    {
+        "code": "96150.02",
+        "name": "Tamizaje en Alcohol y Drogas."
+    },
+    {
+        "code": "96150.03",
+        "name": "Tamizaje en Trastornos Depresivos."
+    },
+    {
+        "code": "96150.04",
+        "name": "Tamizaje en Psicosis."
+    },
+    {
+        "code": "96150.05",
+        "name": "Aplicación del cuestionario de habilidades sociales."
+    },
+    {
+        "code": "96150.06",
+        "name": "Tamizaje especializado para detectar problemas del neurodesarrollo en niñas y niños de 0 a 3 años."
+    },
+    {
+        "code": "96150.07",
+        "name": "Tamizaje para detectar deterioro cognitivo demencia en personas de 60 años y más."
+    },
+    {
+        "code": "96150.08",
+        "name": "Tamizaje para detectar trastornos mentales y del comportamiento de niñas, niños y adolescentes de 3 de 17 años."
+    },
+    {
+        "code": "99402.09",
+        "name": "Consejería de Prevención de riesgos en salud mental."
+    },
+    {
+        "code": "99215",
+        "name": "Consulta ambulatoria especializada para la evaluación y manejo de un paciente continuador."
+    },
+    {
+        "code": "99207",
+        "name": "Consulta de salud mental."
+    },
+    {
+        "code": "99207.04",
+        "name": "Psicoeducación al paciente."
+    },
+    {
+        "code": "99207.01",
+        "name": "Intervención individual de salud mental."
+    },
+    {
+        "code": "99366",
+        "name": "Reunión del o los médicos tratantes con el equipo interdisciplinario de profesionales de la salud (participación de profesional no médicos de la salud), frente a frente con el paciente y/o familia. La reunión tendrá una duración de 30 minutos o más (Plan Individualizado formulado)."
+    },
+    {
+        "code": "99285.01",
+        "name": "Manejo inicial consulta en emergencia problema de alta severidad y pone en riesgo inmediato la vida o deterioro severo funcional. (prioridad I) (Intervención en crisis)."
+    },
+    {
+        "code": "96100.02",
+        "name": "Consejería y Orientación psicológica."
+    },
+    {
+        "code": "99402.17",
+        "name": "Consejería de actividad física."
+    },
+    {
+        "code": "90861",
+        "name": "Terapia de relajación."
+    },
+    {
+        "code": "99401.13",
+        "name": "Consejería en Estilos de Vida saludable."
+    },
+    {
+        "code": "96150",
+        "name": "Evaluación de salud y comportamiento (ejemplo: entrevista clínica enfocada en la salud observación de la conducta monitoreo psicofisiológico cuestionarios orientados a la salud) por cada 15 minutos de contacto cara a cara con el paciente evaluación inicial (Entrevista motivacional)."
+    },
+    {
+        "code": "90834",
+        "name": "Psicoterapia, 45 minutos con el paciente y/o miembro de la familia."
+    },
+    {
+        "code": "90806",
+        "name": "Psicoterapia individual, de soporte, psicodinámica o psicoeducativa o de afronte cognitivo conductual de 45-60 minutos de duración, cara a cara realizado por psicólogo."
+    },
+    {
+        "code": "90860",
+        "name": "Psicoterapia cognitivo conductual."
+    },
+    {
+        "code": "C2111.01",
+        "name": "Psicoeducación a la familia (Intervención familiar)."
+    },
+    {
+        "code": "96100.01",
+        "name": "Sesión de psicoterapia de familia (realizado por el psicólogo)."
+    },
+    {
+        "code": "90847",
+        "name": "Psicoterapia de la familia (psicoterapia conjunta) (con el paciente presente)."
+    },
+    {
+        "code": "99207.06",
+        "name": "Atención en salud mental a mujeres que son víctimas de violencia por su pareja o expareja (incluye aplicación de la ficha de valoración de riesgos)."
+    },
+    {
+        "code": "99207.02",
+        "name": "Intervención grupal en salud mental."
+    },
+    {
+        "code": "C0012",
+        "name": "Sesión de Grupo de ayuda mutua."
+    },
+    {
+        "code": "90857",
+        "name": "Psicoterapia interactiva de grupo."
+    },
+    {
+        "code": "90872",
+        "name": "Taller de habilidades sociales."
+    },
+    {
+        "code": "99401.15",
+        "name": "Consejería en habilidades sociales."
+    },
+    {
+        "code": "99401.19",
+        "name": "Consejería para el autocuidado."
+    },
+    {
+        "code": "99401.25",
+        "name": "Consejería en pautas de crianza buen trato comunicación y cuidados adecuados."
+    },
+    {
+        "code": "99401.29",
+        "name": "Consejería en convivencia saludable en pareja."
+    },
+    {
+        "code": "99402.14",
+        "name": "Consejería en promoción del buen trato y salud."
+    },
+    {
+        "code": "C0002",
+        "name": "Reunión con institución educativa."
+    },
+    {
+        "code": "C0003",
+        "name": "Reunión de comunidad."
+    },
+    {
+        "code": "C0005",
+        "name": "Taller para institución educativa."
+    },
+    {
+        "code": "C0006",
+        "name": "Taller comunitario."
+    },
+    {
+        "code": "C0007",
+        "name": "Taller para la Familia."
+    },
+    {
+        "code": "C0011",
+        "name": "Visitas familiares integrales."
+    },
+    {
+        "code": "C0071",
+        "name": "Análisis de la situación de salud. Identificación de necesidades de salud de la población con partici- pación de la comunidad."
+    },
+    {
+        "code": "C1043",
+        "name": "Coordinaciones con actores de sectores e instituciones en la comunidad (Sesión de movilización de redes de apoyo)."
+    },
+    {
+        "code": "C2111",
+        "name": "Taller psicoeducativo grupal."
+    },
+    {
+        "code": "C7001",
+        "name": "Reunión de Monitoreo."
+    },
+    {
+        "code": "C7003",
+        "name": "Reunión de Evaluación."
+    },
+    {
+        "code": "97009",
+        "name": "Terapia del lenguaje /sesión."
+    },
+    {
+        "code": "96100",
+        "name": "Consulta psicológica."
+    },
+    {
+        "code": "99499.01",
+        "name": "Teleconsulta en línea."
+    },
+    {
+        "code": "99499.08",
+        "name": "Teleorientación síncrona."
+    },
+    {
+        "code": "99499.10",
+        "name": "Telemonitoreo."
+    },
+    {
+        "code": "99499.11",
+        "name": "Teleinterconsulta síncrona. En lab 1º."
+    },
+    {
+        "code": "APP 093",
+        "name": "Actividad con institución educativa."
+    },
+    {
+        "code": "APP 108",
+        "name": "Actividad en comunidad."
+    },
+    {
+        "code": "APP 136",
+        "name": "Actividad con Familia."
+    },
+    {
+        "code": "APP 138",
+        "name": "Actividad con Agentes Comunitarios de Salud."
+    },
+    {
+        "code": "APP 144",
+        "name": "Actividad con Docentes."
+    },
+    {
+        "code": "APP 150",
+        "name": "Actividad con autoridades y líderes comunales."
+    },
+    {
+        "code": "APP 151",
+        "name": "Actividad con Mujeres."
+    },
+    {
+        "code": "APP 166",
+        "name": "Actividades con Líderes Escolares."
+    }
+]

@@ -16,4 +16,8 @@ export class User {
     created_at?: Date;
     updated_at?: Date;
     deleted_at?: Date;
+
+    constructor(id: string = '') {
+        this.id = id;
+    }
 }

@@ -14,6 +14,12 @@ export class PacketEntity {
 
     @Column({
         type: 'varchar',
+        nullable: true
+    })
+    code: string;
+
+    @Column({
+        type: 'varchar',
         nullable: false
     })
     name: string;
@@ -23,6 +29,12 @@ export class PacketEntity {
         nullable: true
     })
     description: string;
+
+    @Column({
+        type: 'text',
+        nullable: true
+    })
+    relational_codes: string;
 
     @Column({
         type: 'boolean',

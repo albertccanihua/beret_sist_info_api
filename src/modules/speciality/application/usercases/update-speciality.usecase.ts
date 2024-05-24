@@ -19,7 +19,8 @@ export class UpdateSpecialityUseCase {
                 user_creator: data.user_creator,
                 code: data.code,
                 name: data.name,
-                description: data.description
+                description: data.description,
+                status: data.status
             });
 
             response.result(speciality);

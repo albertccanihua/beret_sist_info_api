@@ -1,15 +1,17 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
-import { Repository } from 'typeorm';
+import { DeepPartial, Repository } from 'typeorm';
 import { User } from '../../domain/models/user.model';
 import { UserEntity } from '../entities/user.entity';
 import { IQueryBuilderRequest } from 'src/common/packages/request-broker/interfaces/query-builder-request.interface';
 import { GeneralHelper } from 'src/common/helpers/general.helper';
 import { BaseRepositoryImpl } from 'src/common/repository/base.repositoryimpl';
 import { IQueryBuilderPaginatedResponse } from 'src/common/packages/request-broker/interfaces/query-builder-response-paginated.interface';
+import { UsersRepository } from '../../domain/repository/users.repository';
+import { UpdateUserRequest } from '../../domain/requests/update-user.request';
 
 @Injectable()
-export class UsersRepositoryImpl extends BaseRepositoryImpl<UserEntity, User>{
+export class UsersRepositoryImpl extends BaseRepositoryImpl<UserEntity, User> implements UsersRepository {
 
     constructor(
         @InjectRepository(UserEntity)
@@ -35,23 +37,57 @@ export class UsersRepositoryImpl extends BaseRepositoryImpl<UserEntity, User>{
     async list(args: any): Promise<IQueryBuilderPaginatedResponse<UserEntity>> {
         const offset = (args.page - 1) * args.limit;
 
-        const users: UserEntity[] = await this.requestBroker.queryBuilder('user')
+        const query = this.requestBroker.queryBuilder('user')
             .setArgs(args)
             .applyFilters((query, args) => this.customFilters(query, args))
             .getInstance()
             .leftJoinAndSelect('user.type_document', 'type_document')
             .leftJoinAndSelect('user.type_gender', 'type_gender')
             .leftJoinAndSelect('user.type_role', 'type_role')
-            .offset(offset)
-            .limit(args.limit)
-            .getMany();
+
+
+        const usersCount = await query.getCount();
+        const usersPaginated: UserEntity[] = await query.offset(offset).limit(args.limit).getMany();
 
         return {
-            total_data: 100,
-            total_page: users.length,
+            total_data: usersCount,
+            total_page: usersPaginated.length,
             page: args.page,
-            data: users
+            data: usersPaginated
         };
+    }
+
+    async customUpdate(id: any, data: UpdateUserRequest): Promise<User | any> {
+        const record: UserEntity = await this.userRepository.preload({ id, ...data } as DeepPartial<UserEntity>);
+
+        if (!record) return null;
+
+        await this.userRepository.save(record);
+        return record;
+    }
+
+    async changePassword(id: string, password: string): Promise<boolean | null> {
+        const user: UserEntity | null = await this.show(id);
+        if (!user) return null;
+
+        user.password = password;
+        this.userRepository.save(user);
+
+        return true;
+    }
+
+    async findByUsername(username: string): Promise<User | any> {
+        const record: UserEntity | null = await this.requestBroker.queryBuilder('user')
+            .setArgs({ username })
+            .applyFilters((query, args) => this.customFilters(query, args))
+            .getInstance()
+            .leftJoinAndSelect('user.type_document', 'type_document')
+            .leftJoinAndSelect('user.type_gender', 'type_gender')
+            .leftJoinAndSelect('user.type_role', 'type_role')
+            .getOne();
+
+        if (!record) return null;
+        return record;
     }
 
     private customFilters(query: IQueryBuilderRequest<UserEntity>, args: any): void {

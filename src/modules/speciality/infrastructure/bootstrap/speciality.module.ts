@@ -17,7 +17,8 @@ import { SpecialitiesRepositoryImpl } from "../repository/speciality.repositoryi
         SpecialitiesRepositoryImpl
     ],
     exports: [
-        TypeOrmModule
+        TypeOrmModule,
+        SpecialitiesRepositoryImpl
     ]
 })
 export class SpecialityModule { }

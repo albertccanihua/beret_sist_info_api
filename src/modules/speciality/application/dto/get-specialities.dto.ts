@@ -1,4 +1,4 @@
-import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsInt, IsOptional, IsString, IsUUID } from "class-validator";
 
 export class GetSpecialitiesDto {
 
@@ -14,8 +14,8 @@ export class GetSpecialitiesDto {
     @IsOptional()
     name: string;
 
-    @IsBoolean()
+    @IsInt()
     @IsOptional()
-    status: boolean;
+    status: number;
 
 }

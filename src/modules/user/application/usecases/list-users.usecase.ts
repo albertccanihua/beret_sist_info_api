@@ -21,7 +21,6 @@ export class ListUsersUseCase {
 
             return response.resolve();
         } catch (error) {
-            console.log(error);
             throw new HandleExceptionHelper(error).throw();
         }
     }

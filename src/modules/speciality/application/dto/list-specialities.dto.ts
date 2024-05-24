@@ -1,4 +1,4 @@
-import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsInt, IsOptional, IsString, IsUUID } from "class-validator";
 import { PaginateDto } from "src/common/dto/paginate.dto";
 
 export class ListSpecialitiesDto extends PaginateDto {
@@ -15,8 +15,8 @@ export class ListSpecialitiesDto extends PaginateDto {
     @IsOptional()
     name: string;
 
-    @IsBoolean()
+    @IsInt()
     @IsOptional()
-    status: boolean;
+    status: number;
 
 }

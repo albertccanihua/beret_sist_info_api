@@ -1,8 +1,9 @@
 export class Patient {
 
+    id?: string;
     user_creator: string;
     document_number: string;
-    dob: string;
+    dob?: string;
     name: string;
     paternal_surname: string;
     maternal_lastname?: string;
@@ -13,4 +14,7 @@ export class Patient {
     type_gender: string;
     type_financing: string;
 
+    constructor(id: string = '') {
+        this.id = id;
+    }
 }

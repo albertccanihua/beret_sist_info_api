@@ -1,4 +1,8 @@
 import { BaseRepository } from "src/common/repository/base.repository";
 import { Patient } from "../models/patient.model";
 
-export interface PatientsRepository extends BaseRepository<Patient> { }
+export interface PatientsRepository extends BaseRepository<Patient> {
+
+    showByParams(args: any): Promise<Patient | any>;
+
+}

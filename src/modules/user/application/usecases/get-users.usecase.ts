@@ -16,7 +16,14 @@ export class GetUsersUseCase {
             const response = new ResponseHelper();
 
             const users = await this.usersRepository.get(data);
-            response.result(users);
+
+            const processedUsers = users.map((user) => {
+                delete user.username;
+                delete user.password;
+                return user;
+            })
+
+            response.result(processedUsers);
 
             return response.resolve();
         } catch (error) {

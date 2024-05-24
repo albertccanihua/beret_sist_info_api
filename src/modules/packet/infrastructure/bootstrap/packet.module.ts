@@ -23,6 +23,10 @@ import { SpecialityModule } from "src/modules/speciality/infrastructure/bootstra
     providers: [
         PacketsRepositoryImpl,
         PacketSpecialitiesRepositoryImpl
+    ],
+    exports: [
+        PacketsRepositoryImpl,
+        PacketSpecialitiesRepositoryImpl
     ]
 })
 export class PacketModule { }

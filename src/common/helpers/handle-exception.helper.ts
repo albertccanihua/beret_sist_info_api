@@ -1,5 +1,5 @@
 import { QueryFailedError, TypeORMError } from "typeorm";
-import { BadRequestException, InternalServerErrorException, NotFoundException } from "@nestjs/common";
+import { BadRequestException, InternalServerErrorException, NotFoundException, UnauthorizedException } from "@nestjs/common";
 
 export class HandleExceptionHelper {
 
@@ -11,7 +11,7 @@ export class HandleExceptionHelper {
                 throw new BadRequestException(this.error.driverError.message);
 
             }
-            
+
             if (this.error.driverError.errno === 1062, this.error.driverError.sqlState === '23000') {
                 const item = this.error.driverError.message.split(' ')[2];
                 throw new BadRequestException('El registro ' + item + ' ya existe en el sistema');
@@ -31,6 +31,10 @@ export class HandleExceptionHelper {
 
         if (this.error instanceof TypeORMError) {
             throw new BadRequestException(this.error.message);
+        }
+
+        if (this.error instanceof UnauthorizedException) {
+            throw new UnauthorizedException(this.error);
         }
 
         throw new InternalServerErrorException();

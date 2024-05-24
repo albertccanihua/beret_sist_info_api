@@ -18,7 +18,7 @@ export class UserEntity {
 
     @Column({
         type: 'date',
-        nullable: false
+        nullable: true
     })
     dob: string;
 

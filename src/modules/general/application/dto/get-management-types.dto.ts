@@ -1,4 +1,4 @@
-import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsBoolean, IsInt, IsOptional, IsPositive, IsString, IsUUID } from "class-validator";
 
 export class GetManagementTypesDto {
 
@@ -26,8 +26,8 @@ export class GetManagementTypesDto {
     @IsOptional()
     type: string;
 
-    @IsBoolean()
+    @IsInt()
     @IsOptional()
-    status: string;
+    status: number;
 
 }

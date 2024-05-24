@@ -1,4 +1,4 @@
-import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsIn, IsInt, IsOptional, IsString, IsUUID } from "class-validator";
 
 export class GetPacketsDto {
 
@@ -18,8 +18,8 @@ export class GetPacketsDto {
     @IsOptional()
     description: string;
 
-    @IsBoolean()
+    @IsInt()
     @IsOptional()
-    status: boolean;
-    
+    status: number;
+
 }

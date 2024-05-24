@@ -24,7 +24,7 @@ export class UpdatePatientUseCase {
                 paternal_surname: data.paternal_surname,
                 maternal_lastname: data.maternal_lastname,
                 email: data.email,
-                phone_number: data.email,
+                phone_number: data.phone_number,
                 status: data.status,
                 type_document: data.type_document,
                 type_gender: data.type_gender,

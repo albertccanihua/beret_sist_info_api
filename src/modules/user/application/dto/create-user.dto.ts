@@ -6,6 +6,7 @@ export class CreateUserDto {
     document_number: string;
 
     @IsString()
+    @IsOptional()
     dob: string;
 
     @IsString()

@@ -14,6 +14,9 @@ export class CreatePacketDto {
     @IsOptional()
     description: string;
 
+    @IsString()
+    relational_codes: string;
+
     @IsBoolean()
     @IsOptional()
     status: boolean;
