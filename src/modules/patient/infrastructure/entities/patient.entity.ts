@@ -1,6 +1,6 @@
 import { ManagementTypeEntity } from "src/modules/general/infrastructure/entities/management-type.entity";
 import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity";
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('patients')
 export class PatientEntity {
@@ -94,14 +94,12 @@ export class PatientEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     created_at: Date;
 
     @UpdateDateColumn({
         name: 'updated_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     updated_at: Date;
@@ -111,4 +109,10 @@ export class PatientEntity {
         nullable: true
     })
     deleted_at: Date;
+
+    @BeforeInsert()
+    setTimestamp() {
+        this.created_at = new Date();
+        this.updated_at = new Date();
+    }
 }

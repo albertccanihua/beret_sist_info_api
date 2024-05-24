@@ -1,6 +1,6 @@
 import { PatientEntity } from "src/modules/patient/infrastructure/entities/patient.entity";
 import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity";
-import { CreateDateColumn, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, CreateDateColumn, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('treatment_requests')
 export class TreatmentRequestEntity {
@@ -16,7 +16,6 @@ export class TreatmentRequestEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     @Index()
@@ -26,4 +25,9 @@ export class TreatmentRequestEntity {
     @JoinColumn({ name: 'patient_id' })
     @Index()
     patient: PatientEntity;
+
+    @BeforeInsert()
+    setTimestamp() {
+        this.created_at = new Date();
+    }
 }

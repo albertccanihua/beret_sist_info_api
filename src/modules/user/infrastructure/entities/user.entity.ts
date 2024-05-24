@@ -1,6 +1,6 @@
 import { RolesEnum } from "src/common/enum/roles.enum";
 import { ManagementTypeEntity } from "src/modules/general/infrastructure/entities/management-type.entity";
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('users')
 export class UserEntity {
@@ -93,14 +93,12 @@ export class UserEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     created_at: Date;
 
     @UpdateDateColumn({
         name: 'updated_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     updated_at: Date;
@@ -111,4 +109,9 @@ export class UserEntity {
     })
     deleted_at: Date;
 
+    @BeforeInsert()
+    setTimestamp() {
+        this.created_at = new Date();
+        this.updated_at = new Date();
+    }
 }

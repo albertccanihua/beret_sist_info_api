@@ -1,5 +1,5 @@
 import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity";
-import { Column, CreateDateColumn, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('treatment_imports')
 export class TreatmentImportEntity {
@@ -29,10 +29,14 @@ export class TreatmentImportEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     @Index()
     created_at: Date;
+
+    @BeforeInsert()
+    setTimestamp() {
+        this.created_at = new Date();
+    }
 
 }

@@ -2,7 +2,7 @@ import { ManagementTypeEntity } from "src/modules/general/infrastructure/entitie
 import { PacketEntity } from "src/modules/packet/infrastructure/entities/packet.entity";
 import { PatientEntity } from "src/modules/patient/infrastructure/entities/patient.entity";
 import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity";
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, Index, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, DeleteDateColumn, Entity, Index, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { TreatmentSpecialityEntity } from "./treatment-speciality.entity";
 import { TreatmentAssistanceEntity } from "./treatment-assistance.entity";
 
@@ -48,14 +48,12 @@ export class TreatmentEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     created_at: Date;
 
     @UpdateDateColumn({
         name: 'updated_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     updated_at: Date;
@@ -87,4 +85,10 @@ export class TreatmentEntity {
 
     @OneToMany(type => TreatmentAssistanceEntity, treatment_assistances => treatment_assistances.treatment)
     treatment_assistances: TreatmentAssistanceEntity[];
+
+    @BeforeInsert()
+    setTimestamp() {
+        this.created_at = new Date();
+        this.updated_at = new Date();
+    }
 }

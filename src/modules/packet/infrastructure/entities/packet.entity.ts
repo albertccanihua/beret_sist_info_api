@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { PacketSpecialityEntity } from "./packet-speciality.entity";
 import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity";
 
@@ -45,14 +45,12 @@ export class PacketEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     created_at: Date;
 
     @UpdateDateColumn({
         name: 'updated_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     updated_at: Date;
@@ -65,4 +63,10 @@ export class PacketEntity {
 
     @OneToMany(type => PacketSpecialityEntity, packet_specialities => packet_specialities.packet)
     packet_specialities: PacketSpecialityEntity[];
+
+    @BeforeInsert()
+    setTimestamp() {
+        this.created_at = new Date();
+        this.updated_at = new Date();
+    }
 }

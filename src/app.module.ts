@@ -12,11 +12,11 @@ import { EventEmitterModule } from '@nestjs/event-emitter';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '',
-      database: 'hc_ionic_app',
+      host: 'mysql-6c7c9f2-oscarquirozoch-1e36.l.aivencloud.com',
+      port: 17871,
+      username: 'avnadmin',
+      password: 'AVNS_bW2-PcmQMiu2qmYulQp',
+      database: 'defaultdb',
       autoLoadEntities: true,
       synchronize: true,
     }),

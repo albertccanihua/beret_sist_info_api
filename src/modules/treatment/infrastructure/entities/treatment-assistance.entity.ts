@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { TreatmentEntity } from "./treatment.entity";
 import { TreatmentSpecialityEntity } from "./treatment-speciality.entity";
 import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity";
@@ -31,7 +31,6 @@ export class TreatmentAssistanceEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        default: () => 'CURRENT_TIMESTAMP',
         nullable: false
     })
     created_at: Date;
@@ -47,4 +46,9 @@ export class TreatmentAssistanceEntity {
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'profesional_id' })
     profesional: UserEntity;
+
+    @BeforeInsert()
+    setTimestamp() {
+        this.created_at = new Date();
+    }
 }
