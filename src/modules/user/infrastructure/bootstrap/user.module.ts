@@ -25,7 +25,6 @@ import { JwtStrategy } from '../../application/strategies/jwt.strategy';
       inject: [],
       useFactory: () => {
         return {
-          secret: 'this_is_a_new_backend_passport_authentication_token',
           signOptions: {
             expiresIn: '2h'
           }

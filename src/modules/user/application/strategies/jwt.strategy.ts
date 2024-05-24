@@ -12,7 +12,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         private readonly usersRepository: UsersRepositoryImpl
     ) {
         super({
-            secretOrKey: 'this_is_a_new_backend_passport_authentication_token',
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
         });
     }
