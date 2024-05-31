@@ -22,7 +22,6 @@ export class InitialDataController {
     ) { }
 
     @Post()
-    @UseGuards(AuthGuard())
     create(data: CreateInitialDataDto) {
         return new CreateInitialDataUseCase(
             this.managementTypesRepository,
