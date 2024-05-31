@@ -5,8 +5,8 @@ import { BeforeInsert, Column, CreateDateColumn, DeleteDateColumn, Entity, JoinC
 @Entity('specialities')
 export class SpecialityEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'user_creator_id' })

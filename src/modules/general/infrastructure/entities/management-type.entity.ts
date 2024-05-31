@@ -3,8 +3,8 @@ import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedCol
 @Entity('management_types')
 export class ManagementTypeEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @Column({
         type: 'varchar',
@@ -49,14 +49,14 @@ export class ManagementTypeEntity {
 
     @CreateDateColumn({
         name: 'created_at',
-        
+
         nullable: false
     })
     created_at: Date;
 
     @UpdateDateColumn({
         name: 'updated_at',
-        
+
         nullable: false
     })
     updated_at: Date;

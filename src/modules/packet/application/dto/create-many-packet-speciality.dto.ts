@@ -1,21 +1,24 @@
-import { IsInt, IsOptional, IsPositive, IsUUID } from "class-validator";
+import { IsInt, IsNumber, IsOptional, IsPositive } from "class-validator";
 import { Speciality } from "src/modules/speciality/domain/models/speciality.model";
 
 export class CreateManyPacketSpecialityDto {
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    id: string;
+    id: number;
 
     @IsInt()
     @IsPositive()
     sessions: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    packet: string;
+    packet: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     speciality: Speciality;
 
 }

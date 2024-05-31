@@ -1,6 +1,6 @@
 export class Packet {
-    id?: string;
-    user_creator: string;
+    id?: number;
+    user_creator: number;
     name: string;
     description?: string;
     code?: string;
@@ -10,7 +10,7 @@ export class Packet {
     updated_at?: Date;
     deleted_at?: Date;
 
-    constructor(id: string = '') {
+    constructor(id: number = null) {
         this.id = id;
     }
 }

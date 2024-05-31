@@ -1,9 +1,10 @@
-import { IsString, IsUUID } from "class-validator";
+import { IsNumber, IsPositive, IsString } from "class-validator";
 
 export class ChangePasswordDto {
 
-    @IsUUID()
-    id: string;
+    @IsNumber()
+    @IsPositive()
+    id: number;
 
     @IsString()
     password: string;

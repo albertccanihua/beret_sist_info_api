@@ -1,0 +1,42 @@
+[
+    {
+        "name": "C.E.",
+        "type": "type_document"
+    },
+    {
+        "name": "Pasaporte",
+        "type": "type_document"
+    },
+    {
+        "name": "DNI",
+        "type": "type_document"
+    },
+    {
+        "name": "S.I.S",
+        "type": "type_financing"
+    },
+    {
+        "name": "Mujer",
+        "type": "type_gender"
+    },
+    {
+        "name": "Hombre",
+        "type": "type_gender"
+    },
+    {
+        "name": "Profesional",
+        "type": "type_role"
+    },
+    {
+        "name": "Administrador",
+        "type": "type_role"
+    },
+    {
+        "name": "Completado",
+        "type": "type_status_treatment"
+    },
+    {
+        "name": "En proceso",
+        "type": "type_status_treatment"
+    }
+]

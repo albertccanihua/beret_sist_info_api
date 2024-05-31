@@ -50,12 +50,14 @@ export class TreatmentsRepositoryImpl extends BaseRepositoryImpl<TreatmentEntity
             .applyFilters((query, args) => this.customFilters(query, args))
             .getInstance()
             .innerJoinAndSelect('treatment.patient', 'patient')
+            .innerJoinAndSelect('treatment.packet', 'packet')
+            .innerJoinAndSelect('treatment.type_status_treatment', 'type_status_treatment')
             .getMany();
 
         return treatments;
     }
 
-    async getPatientTreatmentCorrelative(patient_id: string, patient_document_number: string):
+    async getPatientTreatmentCorrelative(patient_id: number, patient_document_number: string):
         Promise<{ correlative: string, number: string }> {
         const pastTreatments: Treatment[] = await this.get({ patient: patient_id });
 

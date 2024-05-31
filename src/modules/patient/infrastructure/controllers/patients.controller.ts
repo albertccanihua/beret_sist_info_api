@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards } from "@nestjs/common";
 import { PatientsRepositoryImpl } from "../repository/patient.repositoryimpl";
 import { ShowPatientUseCase } from "../../application/usecases/show-patient.usecase";
 import { ShowPatientDto } from "../../application/dto/show-patient.dto";
@@ -12,6 +12,7 @@ import { UpdatePatientDto } from "../../application/dto/update-patient.dto";
 import { UpdatePatientUseCase } from "../../application/usecases/update-patient.usecase";
 import { DeletePatientDto } from "../../application/dto/delete-patient.dto";
 import { DeletePatientUseCase } from "../../application/usecases/delete-patient.usecase";
+import { AuthGuard } from "@nestjs/passport";
 
 @Controller('patients')
 export class PatientsController {
@@ -21,31 +22,37 @@ export class PatientsController {
     ) { }
 
     @Get('/show/:id')
-    show(@Param('id') id: string) {
+    @UseGuards(AuthGuard())
+    show(@Param('id') id: number) {
         return new ShowPatientUseCase(this.patientsRepository).exec({ id } as ShowPatientDto);
     }
 
     @Get('/get')
+    @UseGuards(AuthGuard())
     get(@Query() getPatientsDto: GetPatientsDto) {
         return new GetPatientsUseCase(this.patientsRepository).exec(getPatientsDto);
     }
 
     @Get('/list')
+    @UseGuards(AuthGuard())
     list(@Query() listPatientsDto: ListPatientsDto) {
         return new ListPatientsUseCase(this.patientsRepository).exec(listPatientsDto);
     }
 
     @Post()
+    @UseGuards(AuthGuard())
     create(@Body() createPatientDto: CreatePatientDto) {
         return new CreatePatientUseCase(this.patientsRepository).exec(createPatientDto);
     }
 
     @Put()
+    @UseGuards(AuthGuard())
     update(@Body() updatePatientDto: UpdatePatientDto) {
         return new UpdatePatientUseCase(this.patientsRepository).exec(updatePatientDto);
     }
 
     @Delete()
+    @UseGuards(AuthGuard())
     delete(@Body() deletePatientDto: DeletePatientDto) {
         return new DeletePatientUseCase(this.patientsRepository).exec(deletePatientDto);
     }

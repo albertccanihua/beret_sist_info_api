@@ -6,9 +6,8 @@ import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity
 @Entity('treatment_assistances')
 export class TreatmentAssistanceEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    @Index()
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @Column({
         type: 'date',

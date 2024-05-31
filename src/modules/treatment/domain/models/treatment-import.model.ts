@@ -1,7 +1,7 @@
 export class TreatmentImport {
 
-    id?: string;
-    user_creator: string;
+    id?: number;
+    user_creator: number;
     filename: string;
     status: boolean;
     created_at?: Date;

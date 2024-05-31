@@ -1,11 +1,12 @@
 import { Type } from "class-transformer";
-import { IsArray, IsBoolean, IsOptional, IsString, IsUUID, ValidateNested } from "class-validator";
+import { IsArray, IsBoolean, IsNumber, IsOptional, IsPositive, IsString, ValidateNested } from "class-validator";
 import { CreateManyPacketSpecialityDto } from "./create-many-packet-speciality.dto";
 
 export class CreatePacketDto {
 
-    @IsUUID()
-    user_creator: string;
+    @IsNumber()
+    @IsPositive()
+    user_creator: number;
 
     @IsString()
     name: string;

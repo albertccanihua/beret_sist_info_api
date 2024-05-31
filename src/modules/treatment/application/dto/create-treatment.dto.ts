@@ -1,21 +1,24 @@
-import { IsOptional, IsString, IsUUID, MaxLength } from "class-validator";
+import { IsNumber, IsOptional, IsPositive, IsString, MaxLength } from "class-validator";
 import { Packet } from "src/modules/packet/domain/models/packet.model";
 import { Patient } from "src/modules/patient/domain/models/patient.model";
 
 export class CreateTreatmentDto {
 
-    @IsUUID()
-    user_creator: string;
+    @IsNumber()
+    @IsPositive()
+    user_creator: number;
 
     @IsString()
     @MaxLength(100)
     @IsOptional()
-    name: string;   
+    name: string;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     packet: Packet;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     patient: Patient;
 
     @IsString()

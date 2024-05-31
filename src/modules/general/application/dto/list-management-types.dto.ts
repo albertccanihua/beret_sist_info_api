@@ -1,11 +1,12 @@
-import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsBoolean, IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 import { PaginateDto } from "src/common/dto/paginate.dto";
 
 export class ListManagementTypesDto extends PaginateDto {
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    id: string;
+    id: number;
 
     @IsString()
     @IsOptional()

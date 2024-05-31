@@ -1,12 +1,14 @@
-import { IsUUID } from "class-validator";
+import { IsNumber, IsPositive } from "class-validator";
 import { Patient } from "src/modules/patient/domain/models/patient.model";
 
 export class CreateTreatmentRequestDto {
 
-    @IsUUID()
-    user_creator: string;
+    @IsNumber()
+    @IsPositive()
+    user_creator: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     patient: Patient;
 
 }

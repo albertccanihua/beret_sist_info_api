@@ -1,5 +1,5 @@
 export class User {
-    id?: string;
+    id?: number;
     document_number: string;
     dob: string;
     name: string;
@@ -10,14 +10,14 @@ export class User {
     username: string;
     password: string;
     status?: boolean;
-    type_document: string;
-    type_gender: string;
-    type_role: string;
+    type_document: number;
+    type_gender: number;
+    type_role: number;
     created_at?: Date;
     updated_at?: Date;
     deleted_at?: Date;
 
-    constructor(id: string = '') {
+    constructor(id: number = null) {
         this.id = id;
     }
 }

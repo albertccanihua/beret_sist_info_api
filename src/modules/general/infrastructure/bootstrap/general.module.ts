@@ -10,11 +10,17 @@ import { PacketModule } from "src/modules/packet/infrastructure/bootstrap/packet
 import { TreatmentModule } from "src/modules/treatment/infrastructure/bootstrap/treatment.module";
 import { UserModule } from "src/modules/user/infrastructure/bootstrap/user.module";
 import { SpecialityModule } from "src/modules/speciality/infrastructure/bootstrap/speciality.module";
+import { MassiveUploadEntity } from "../entities/massive-upload.entity";
+import { MassiveUploadItemEntity } from "../entities/massive-upload-item.entity";
+import { MassiveUploadRepositoryImpl } from "../repository/massive-upload.repositoryimpl";
+import { MassiveUploadItemRepositoryImpl } from "../repository/massive-upload-item.repositoryimpl";
 
 @Module({
     imports: [
         TypeOrmModule.forFeature([
-            ManagementTypeEntity
+            ManagementTypeEntity,
+            MassiveUploadEntity,
+            MassiveUploadItemEntity
         ]),
         PatientModule,
         PacketModule,
@@ -28,7 +34,9 @@ import { SpecialityModule } from "src/modules/speciality/infrastructure/bootstra
         UploadDataController
     ],
     providers: [
-        ManagementTypesRepositoryImpl
+        ManagementTypesRepositoryImpl,
+        MassiveUploadRepositoryImpl,
+        MassiveUploadItemRepositoryImpl
     ],
     exports: [
         ManagementTypesRepositoryImpl

@@ -1,9 +1,10 @@
-import { IsDateString, IsUUID } from "class-validator";
+import { IsDateString, IsNumber, IsPositive } from "class-validator";
 
 export class GetAssistanceFollowUpDto {
 
-    @IsUUID()
-    profesional: string;
+    @IsNumber()
+    @IsPositive()
+    profesional: number;
 
     @IsDateString()
     date_care: string;

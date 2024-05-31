@@ -6,7 +6,7 @@ export interface UpdateUserRequest {
     maternal_lastname: string;
     email: string;
     phone_number: string;
-    type_document: string;
-    type_gender: string;
-    type_role: string;
+    type_document: number;
+    type_gender: number;
+    type_role: number;
 }

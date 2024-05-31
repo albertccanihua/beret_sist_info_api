@@ -10,7 +10,7 @@ export interface TreatmentsRepository {
     create(data: Treatment): Promise<Treatment>;
     update(id: any, data: Treatment): Promise<Treatment>;
     delete(id: any): Promise<Treatment>;
-    getPatientTreatmentCorrelative(patient_id: string, patient_document_number: string):
+    getPatientTreatmentCorrelative(patient_id: number, patient_document_number: string):
         Promise<{ correlative: string, number: string }>;
 
 }

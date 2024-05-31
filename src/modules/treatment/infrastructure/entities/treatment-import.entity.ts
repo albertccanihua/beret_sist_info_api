@@ -4,9 +4,8 @@ import { BeforeInsert, Column, CreateDateColumn, Entity, Index, JoinColumn, Many
 @Entity('treatment_imports')
 export class TreatmentImportEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    @Index()
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'user_creator_id' })

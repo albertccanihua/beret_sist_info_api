@@ -5,12 +5,12 @@ import { UserEntity } from "src/modules/user/infrastructure/entities/user.entity
 @Entity('packets')
 export class PacketEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'user_creator_id' })
-    user_creator: string;
+    user_creator: number;
 
     @Column({
         type: 'varchar',

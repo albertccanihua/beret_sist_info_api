@@ -17,6 +17,11 @@ import { SpecialitiesRepository } from "src/modules/speciality/domain/repository
 import { Speciality } from "src/modules/speciality/domain/models/speciality.model";
 import { Patient } from "src/modules/patient/domain/models/patient.model";
 import { PacketSpecialitiesRepository } from "src/modules/packet/domain/repository/packet-specialities.repository";
+import { HandleExceptionHelper } from "src/common/helpers/handle-exception.helper";
+import { ResponseHelper } from "src/common/helpers/response.helper";
+import { MassiveUploadRepository } from "../../domain/repository/massive-upload.repository";
+import { MassiveUploadItemRepository } from "../../domain/repository/massive-upload-item.repository";
+import { MassiveUpload } from "../../domain/models/massive-upload.model";
 
 export class UploadDataUseCase {
 
@@ -42,23 +47,50 @@ export class UploadDataUseCase {
         private specialitiesRepository: SpecialitiesRepository,
         private treatmentsRepository: TreatmentsRepository,
         private treatmentSpecialitiesRepository: TreatmentSpecialitiesRepostory,
-        private treatmentAssistancesRepository: TreatmentAssistancesRepository
+        private treatmentAssistancesRepository: TreatmentAssistancesRepository,
+        private massiveUploadRepository: MassiveUploadRepository,
+        private massiveUploadItemRepository: MassiveUploadItemRepository
     ) { }
 
     async exec(data: UploadDataDto) {
+        try {
+            const response = new ResponseHelper();
 
-        await this.getGeneralData();
-        await this.getAllPackets();
+            await this.getGeneralData();
+            await this.getAllPackets();
 
-        this.groupPacketsWithRelationalCodes();
+            this.groupPacketsWithRelationalCodes();
 
-        // Register patients
-        await this.uploadPatients(data);
+            // Register patients
+            await this.uploadPatients(data);
 
-        // Registrar tratamientos
-        await this.uploadAssistances(data);
+            // Registrar tratamientos
+            await this.uploadAssistances(data);
 
-        return this.uploadedData;
+            const massiveUpload = await this.massiveUploadRepository.create({
+                user_creator: data.user_creator,
+                status: true
+            });
+
+            if (massiveUpload) {
+                for (let data of this.uploadedData) {
+                    await this.massiveUploadItemRepository.create({
+                        item: data.item,
+                        reason: data.reason,
+                        status: data.status,
+                        massive_upload: massiveUpload
+                    });
+                }
+            }
+
+
+            response.code(201);
+            response.result(this.uploadedData);
+
+            return response.resolve();
+        } catch (error) {
+            throw new HandleExceptionHelper(error).throw();
+        }
     }
 
     // =================================
@@ -97,7 +129,7 @@ export class UploadDataUseCase {
     }
 
     private async uploadAssistances(data: UploadDataDto) {
-        let currentPacketId: string = null;
+        let currentPacketId: number = null;
 
         for (let item of data.items) {
 
@@ -247,7 +279,7 @@ export class UploadDataUseCase {
                     status: true,
                     treatment: new Treatment(activeTreatment.id),
                     treatment_speciality: new TreatmentSpeciality(foundTreatmentSpeciality.id),
-                    professional: new User(foundProfessional.id)
+                    profesional: new User(foundProfessional.id),
                 })
             } catch (error) {
                 this.addErrorItem(item, error);
@@ -317,7 +349,7 @@ export class UploadDataUseCase {
         return specialityResponse[0];
     }
 
-    private async getTreatmentSpeciality(treatment_id: string, speciality_id: string) {
+    private async getTreatmentSpeciality(treatment_id: number, speciality_id: number) {
         const treatmentSpecialityResponse = await this.treatmentSpecialitiesRepository.get({
             treatment: treatment_id,
             speciality: speciality_id
@@ -377,7 +409,7 @@ export class UploadDataUseCase {
     private addSuccessItem(item: any) {
         this.uploadedData.push({
             item: JSON.stringify(item),
-            status: false,
+            status: true,
             reason: JSON.stringify(['Cargado correctamente'])
         });
     }

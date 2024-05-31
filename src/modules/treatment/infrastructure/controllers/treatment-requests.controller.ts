@@ -1,10 +1,11 @@
-import { Body, Controller, Get, Post, Query } from "@nestjs/common";
+import { Body, Controller, Get, Post, Query, UseGuards } from "@nestjs/common";
 import { TreatmentRequestsRepositoryImpl } from "../repository/treatment-request.repositoryimpl";
 import { CreateTreatmentRequestDto } from "../../application/dto/create-treatment-request.dto";
 import { CreateTreatmentRequestUseCase } from "../../application/usecases/create-treatment-request.usecase";
 import { GetFollowUpUseCase } from "../../application/usecases/get-follow-up.usecase";
 import { GetFollowUpDto } from "../../application/dto/get-follow-up.dto";
 import { GetRequestsFollowUpDetailsUseCase } from "../../application/usecases/get-requests-follow-up-details.usecase";
+import { AuthGuard } from "@nestjs/passport";
 
 @Controller('treatment-requests')
 export class TreatmentRequestController {
@@ -14,6 +15,7 @@ export class TreatmentRequestController {
     ) { }
 
     @Get('/get/follow-up')
+    @UseGuards(AuthGuard())
     getFollowUp(@Query() getFollowUpDto: GetFollowUpDto) {
         return new GetFollowUpUseCase(
             this.treatmentRequestsRepository
@@ -21,6 +23,7 @@ export class TreatmentRequestController {
     }
 
     @Get('get/follow-up-details')
+    @UseGuards(AuthGuard())
     getFollowUpDetails(@Query() getFollowUpDetails: GetFollowUpDto) {
         return new GetRequestsFollowUpDetailsUseCase(
             this.treatmentRequestsRepository
@@ -28,6 +31,7 @@ export class TreatmentRequestController {
     }
 
     @Post()
+    @UseGuards(AuthGuard())
     create(@Body() createTreatmentRequestDto: CreateTreatmentRequestDto) {
         return new CreateTreatmentRequestUseCase(
             this.treatmentRequestsRepository

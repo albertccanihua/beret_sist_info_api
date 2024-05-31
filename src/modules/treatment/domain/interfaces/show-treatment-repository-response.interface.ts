@@ -1,5 +1,5 @@
 export interface IShowTreatmentRepositoryResponse {
-    id: string;
+    id: number;
     code: string;
     name: string;
     status: boolean;
@@ -13,7 +13,7 @@ export interface IShowTreatmentRepositoryResponse {
 }
 
 export interface IPatientTreatment {
-    id: string;
+    id: number;
     document_number: string;
     dob: string;
     name: string;
@@ -31,7 +31,7 @@ export interface IPatientTreatment {
 }
 
 export interface ITreatmentSpecialityElement {
-    id: string;
+    id: number;
     sessions: number;
     sessions_taken: number;
     speciality: IManagementType;
@@ -39,7 +39,7 @@ export interface ITreatmentSpecialityElement {
 }
 
 export interface ITreatmentAssistance {
-    id: string;
+    id: number;
     date_appointment: Date;
     date_care: Date;
     status: boolean;
@@ -49,7 +49,7 @@ export interface ITreatmentAssistance {
 }
 
 export interface IProfesional {
-    id: string;
+    id: number;
     document_number: string;
     dob: Date;
     name: string;
@@ -66,13 +66,13 @@ export interface IProfesional {
 }
 
 export interface ITreatmentAssistanceTreatmentSpeciality {
-    id: string;
+    id: number;
     sessions: number;
     sessions_taken: number;
 }
 
 export interface IManagementType {
-    id: string;
+    id: number;
     code?: string;
     name: string;
     description?: string;

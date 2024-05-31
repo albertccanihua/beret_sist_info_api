@@ -6,9 +6,8 @@ import { TreatmentAssistanceEntity } from "./treatment-assistance.entity";
 @Entity('treatment_specialities')
 export class TreatmentSpecialityEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    @Index()
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @Column({
         type: 'integer',

@@ -5,9 +5,8 @@ import { BeforeInsert, CreateDateColumn, Entity, Index, JoinColumn, ManyToOne, P
 @Entity('treatment_requests')
 export class TreatmentRequestEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    @Index()
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'user_creator_id' })

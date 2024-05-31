@@ -1,9 +1,10 @@
-import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsBoolean, IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 
 export class CreateSpecialityDto {
 
-    @IsUUID()
-    user_creator: string;
+    @IsNumber()
+    @IsPositive()
+    user_creator: number;
 
     @IsString()
     code: string;

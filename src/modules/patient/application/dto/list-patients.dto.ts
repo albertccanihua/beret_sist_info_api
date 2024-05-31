@@ -1,15 +1,17 @@
-import { IsBoolean, IsEmail, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsBoolean, IsEmail, IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 import { PaginateDto } from "src/common/dto/paginate.dto";
 
 export class ListPatientsDto extends PaginateDto {
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    id: string;
+    id: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    user_creator: string;
+    user_creator: number;
 
     @IsString()
     @IsOptional()
@@ -39,16 +41,19 @@ export class ListPatientsDto extends PaginateDto {
     @IsOptional()
     status: boolean;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    type_document: string;
+    type_document: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    type_gender: string;
+    type_gender: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    type_financing: string;
+    type_financing: number;
 
 }

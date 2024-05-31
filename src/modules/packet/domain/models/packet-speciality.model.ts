@@ -2,7 +2,7 @@ import { Speciality } from "src/modules/speciality/domain/models/speciality.mode
 import { Packet } from "./packet.model";
 
 export class PacketSpeciality {
-    id?: string;
+    id?: number;
     sessions: number;
     packet: Packet;
     speciality: Speciality;

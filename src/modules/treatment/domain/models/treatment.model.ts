@@ -3,8 +3,8 @@ import { Packet } from "src/modules/packet/domain/models/packet.model";
 import { Patient } from "src/modules/patient/domain/models/patient.model";
 
 export class Treatment {
-    id?: string;
-    user_creator: string;
+    id?: number;
+    user_creator: number;
     code: string;
     name?: string;
     acceptance_rate: number;
@@ -16,7 +16,7 @@ export class Treatment {
     patient: Patient;
     type_status_treatment: ManagementType;
 
-    constructor(id: string = '') {
+    constructor(id: number = null) {
         this.id = id;
     }
 }

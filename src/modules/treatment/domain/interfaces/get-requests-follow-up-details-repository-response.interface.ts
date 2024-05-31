@@ -4,14 +4,14 @@ export interface IGetRequestFollowUpDetailsRepositoryResponse {
 }
 
 export interface RequestsPer {
-    id: string;
+    id: number;
     created_at: Date;
     user_creator?: Patient;
     patient: Patient;
 }
 
 export interface Patient {
-    id: string;
+    id: number;
     document_number: string;
     dob: Date;
     name: string;

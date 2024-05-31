@@ -1,8 +1,9 @@
-import { IsUUID } from "class-validator";
+import { IsNumber, IsPositive } from "class-validator";
 
 export class IdDto {
 
-    @IsUUID()
-    id: string;
+    @IsNumber()
+    @IsPositive()
+    id: number;
 
 }

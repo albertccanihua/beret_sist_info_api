@@ -1,15 +1,17 @@
-import { IsInt, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsInt, IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 import { PaginateDto } from "src/common/dto/paginate.dto";
 
 export class ListPacketsDto extends PaginateDto {
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    id: string;
+    id: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    user_creator: string;
+    user_creator: number;
 
     @IsString()
     @IsOptional()

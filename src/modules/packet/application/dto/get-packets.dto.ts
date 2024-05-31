@@ -1,14 +1,16 @@
-import { IsIn, IsInt, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsInt, IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 
 export class GetPacketsDto {
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    id: string;
+    id: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    user_creator: string;
+    user_creator: number;
 
     @IsString()
     @IsOptional()

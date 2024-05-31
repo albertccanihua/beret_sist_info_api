@@ -1,9 +1,10 @@
-import {IsBoolean, IsOptional, IsString, IsUUID} from "class-validator";
+import { IsBoolean, IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 
 export class CreatePatientDto {
 
-    @IsUUID()
-    user_creator: string;
+    @IsNumber()
+    @IsPositive()
+    user_creator: number;
 
     @IsString()
     document_number: string;
@@ -34,12 +35,15 @@ export class CreatePatientDto {
     @IsOptional()
     status: boolean;
 
-    @IsUUID()
-    type_document: string;
+    @IsNumber()
+    @IsPositive()
+    type_document: number;
 
-    @IsUUID()
-    type_gender: string;
+    @IsNumber()
+    @IsPositive()
+    type_gender: number;
 
-    @IsUUID()
-    type_financing: string;
+    @IsNumber()
+    @IsPositive()
+    type_financing: number;
 }

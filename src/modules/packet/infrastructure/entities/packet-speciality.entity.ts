@@ -5,8 +5,8 @@ import { PacketEntity } from "./packet.entity";
 @Entity('packet_specialities')
 export class PacketSpecialityEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @Column({
         type: 'integer',

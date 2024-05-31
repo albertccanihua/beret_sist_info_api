@@ -66,7 +66,7 @@ export class UsersRepositoryImpl extends BaseRepositoryImpl<UserEntity, User> im
         return record;
     }
 
-    async changePassword(id: string, password: string): Promise<boolean | null> {
+    async changePassword(id: number, password: string): Promise<boolean | null> {
         const user: UserEntity | null = await this.show(id);
         if (!user) return null;
 

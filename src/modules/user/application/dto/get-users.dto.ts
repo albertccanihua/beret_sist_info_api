@@ -1,10 +1,11 @@
-import { IsBoolean, IsOptional, IsString, IsUUID } from "class-validator";
+import { IsBoolean, IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 
 export class GetUsersDto {
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    id: string;
+    id: number;
 
     @IsString()
     @IsOptional()
@@ -30,11 +31,13 @@ export class GetUsersDto {
     @IsOptional()
     status: string;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    type_document: string;
+    type_document: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    type_role: string;
+    type_role: number;
 }

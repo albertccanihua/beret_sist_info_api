@@ -1,11 +1,12 @@
 import { Type } from "class-transformer";
-import { IsArray, IsUUID, ValidateNested } from "class-validator";
+import { IsArray, IsNumber, IsPositive, ValidateNested } from "class-validator";
 import { ObjectForUploadingDto } from "./object-for-uploading.dto";
 
 export class UploadDataDto {
 
-    @IsUUID()
-    user_creator: string;
+    @IsNumber()
+    @IsPositive()
+    user_creator: number;
 
     @IsArray()
     @ValidateNested({ each: true })

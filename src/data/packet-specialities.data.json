@@ -1,0 +1,531 @@
+[
+    {
+        "packet_code": "0070612",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 3
+            },
+            {
+                "code": "90806",
+                "sessions": 8
+            },
+            {
+                "code": "99207.04",
+                "sessions": 3
+            },
+            {
+                "code": "99207.01",
+                "sessions": 4
+            },
+            {
+                "code": "C2111.01",
+                "sessions": 3
+            },
+            {
+                "code": "C1043",
+                "sessions": 2
+            },
+            {
+                "code": "C0011",
+                "sessions": 2
+            }
+        ]
+    },
+    {
+        "packet_code": "0070613",
+        "specialities": [
+            {
+                "code": "99215",
+                "sessions": 3
+            },
+            {
+                "code": "90806",
+                "sessions": 12
+            },
+            {
+                "code": "99207.04",
+                "sessions": 3
+            },
+            {
+                "code": "C2111.01",
+                "sessions": 4
+            },
+            {
+                "code": "C1043",
+                "sessions": 3
+            },
+            {
+                "code": "C0011",
+                "sessions": 2
+            }
+        ]
+    },
+    {
+        "packet_code": "0070614",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 3
+            },
+            {
+                "code": "90806",
+                "sessions": 12
+            },
+            {
+                "code": "99207.04",
+                "sessions": 6
+            },
+            {
+                "code": "99207.01",
+                "sessions": 3
+            },
+            {
+                "code": "C2111.01",
+                "sessions": 4
+            },
+            {
+                "code": "C1043",
+                "sessions": 2
+            },
+            {
+                "code": "C0011",
+                "sessions": 2
+            }
+        ]
+    },
+    {
+        "packet_code": "0070615",
+        "specialities": [
+            {
+                "code": "99215",
+                "sessions": 3
+            },
+            {
+                "code": "90806",
+                "sessions": 12
+            },
+            {
+                "code": "99207.04",
+                "sessions": 6
+            },
+            {
+                "code": "C2111.01",
+                "sessions": 4
+            },
+            {
+                "code": "C1043",
+                "sessions": 2
+            },
+            {
+                "code": "C0011",
+                "sessions": 2
+            }
+        ]
+    },
+    {
+        "packet_code": "0070616",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 3
+            },
+            {
+                "code": "90806",
+                "sessions": 8
+            },
+            {
+                "code": "99207.01",
+                "sessions": 8
+            },
+            {
+                "code": "99207.02",
+                "sessions": 4
+            },
+            {
+                "code": "C1043",
+                "sessions": 2
+            },
+            {
+                "code": "C0011",
+                "sessions": 2
+            }
+        ]
+    },
+    {
+        "packet_code": "5005927",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 3
+            },
+            {
+                "code": "90806",
+                "sessions": 8
+            },
+            {
+                "code": "99207.02",
+                "sessions": 4
+            },
+            {
+                "code": "C1043",
+                "sessions": 1
+            },
+            {
+                "code": "C0011",
+                "sessions": 1
+            }
+        ]
+    },
+    {
+        "packet_code": "5005190",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 6
+            },
+            {
+                "code": "96102",
+                "sessions": 2
+            },
+            {
+                "code": "90806",
+                "sessions": 16
+            },
+            {
+                "code": "99207.04",
+                "sessions": 4
+            },
+            {
+                "code": "C0012",
+                "sessions": 6
+            },
+            {
+                "code": "90863",
+                "sessions": 12
+            },
+            {
+                "code": "C0011",
+                "sessions": 3
+            }
+        ]
+    },
+    {
+        "packet_code": "0070610",
+        "specialities": [
+            {
+                "code": "99285.01",
+                "sessions": 1
+            },
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 4
+            },
+            {
+                "code": "90806",
+                "sessions": 12
+            },
+            {
+                "code": "96100.01",
+                "sessions": 8
+            },
+            {
+                "code": "99207.04",
+                "sessions": 8
+            },
+            {
+                "code": "C0012",
+                "sessions": 10
+            },
+            {
+                "code": "90863",
+                "sessions": 12
+            },
+            {
+                "code": "C0011",
+                "sessions": 10
+            }
+        ]
+    },
+    {
+        "packet_code": "0070611",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 6
+            },
+            {
+                "code": "90806",
+                "sessions": 20
+            },
+            {
+                "code": "99207.04",
+                "sessions": 4
+            },
+            {
+                "code": "C0012",
+                "sessions": 12
+            },
+            {
+                "code": "99402.17",
+                "sessions": 16
+            },
+            {
+                "code": "90863",
+                "sessions": 12
+            },
+            {
+                "code": "C0011",
+                "sessions": 4
+            }
+        ]
+    },
+    {
+        "packet_code": "5005192",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99207.01",
+                "sessions": 4
+            },
+            {
+                "code": "99402.09",
+                "sessions": 1
+            }
+        ]
+    },
+    {
+        "packet_code": "70617",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 4
+            },
+            {
+                "code": "90806",
+                "sessions": 4
+            },
+            {
+                "code": "99207.01",
+                "sessions": 2
+            },
+            {
+                "code": "C2111.01",
+                "sessions": 2
+            },
+            {
+                "code": "97150",
+                "sessions": 2
+            },
+            {
+                "code": "C0011",
+                "sessions": 2
+            }
+        ]
+    },
+    {
+        "packet_code": "5005194",
+        "specialities": [
+            {
+                "code": "90849",
+                "sessions": 10
+            },
+            {
+                "code": "C2111.01",
+                "sessions": 2
+            }
+        ]
+    },
+    {
+        "packet_code": "5005195",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 6
+            },
+            {
+                "code": "90806",
+                "sessions": 10
+            },
+            {
+                "code": "99207.04",
+                "sessions": 4
+            },
+            {
+                "code": "99207.01",
+                "sessions": 6
+            },
+            {
+                "code": "C2111.01",
+                "sessions": 3
+            },
+            {
+                "code": "99210",
+                "sessions": 3
+            },
+            {
+                "code": "99207.02",
+                "sessions": 10
+            },
+            {
+                "code": "C0011",
+                "sessions": 3
+            }
+        ]
+    },
+    {
+        "packet_code": "0070619",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 6
+            },
+            {
+                "code": "90806",
+                "sessions": 10
+            },
+            {
+                "code": "99207.04",
+                "sessions": 4
+            },
+            {
+                "code": "99207.01",
+                "sessions": 6
+            },
+            {
+                "code": "90847",
+                "sessions": 3
+            },
+            {
+                "code": "99210",
+                "sessions": 3
+            },
+            {
+                "code": "99207.02",
+                "sessions": 10
+            },
+            {
+                "code": "99509",
+                "sessions": 3
+            }
+        ]
+    },
+    {
+        "packet_code": "0070629",
+        "specialities": [
+            {
+                "code": "99215",
+                "sessions": 4
+            },
+            {
+                "code": "96100.05",
+                "sessions": 6
+            },
+            {
+                "code": "97535.01",
+                "sessions": 6
+            }
+        ]
+    },
+    {
+        "packet_code": "0070620",
+        "specialities": [
+            {
+                "code": "99374",
+                "sessions": 10
+            },
+            {
+                "code": "C7002",
+                "sessions": 10
+            }
+        ]
+    },
+    {
+        "packet_code": "0070621",
+        "specialities": [
+            {
+                "code": "99366",
+                "sessions": 1
+            },
+            {
+                "code": "99215",
+                "sessions": 6
+            },
+            {
+                "code": "90806",
+                "sessions": 10
+            },
+            {
+                "code": "99207.04",
+                "sessions": 4
+            },
+            {
+                "code": "99207.01",
+                "sessions": 6
+            },
+            {
+                "code": "90847",
+                "sessions": 3
+            },
+            {
+                "code": "99210",
+                "sessions": 3
+            },
+            {
+                "code": "99207.02",
+                "sessions": 10
+            },
+            {
+                "code": "98966",
+                "sessions": 10
+            },
+            {
+                "code": "99509",
+                "sessions": 3
+            }
+        ]
+    }
+]

@@ -2072,6 +2072,26 @@
         "name": "Consulta ambulatoria especializada para la evaluación y manejo de un paciente continuador."
     },
     {
+        "code": "C7002",
+        "name": "Supervisión de enfermera."
+    },
+    {
+        "code": "97535.01",
+        "name": "Terapia ocupacional."
+    },
+    {
+        "code": "99374",
+        "name": "Suversion medica de cuidado de un paciente en casa."
+    },
+    {
+        "code": "96100.05",
+        "name": "Terapia de rehabilitación del deterioro cognitivo."
+    },
+    {
+        "code": "96102",
+        "name": "Evaluación psicologica"
+    },
+    {
         "code": "99207",
         "name": "Consulta de salud mental."
     },
@@ -2120,8 +2140,16 @@
         "name": "Psicoterapia individual, de soporte, psicodinámica o psicoeducativa o de afronte cognitivo conductual de 45-60 minutos de duración, cara a cara realizado por psicólogo."
     },
     {
+        "code": "97150",
+        "name": "Trabajo grupal."
+    },
+    {
         "code": "90860",
         "name": "Psicoterapia cognitivo conductual."
+    },
+    {
+        "code": "99210",
+        "name": "Intervención social."
     },
     {
         "code": "C2111.01",
@@ -2136,12 +2164,24 @@
         "name": "Psicoterapia de la familia (psicoterapia conjunta) (con el paciente presente)."
     },
     {
+        "code": "99509",
+        "name": "Visita domiciliaria."
+    },
+    {
         "code": "99207.06",
         "name": "Atención en salud mental a mujeres que son víctimas de violencia por su pareja o expareja (incluye aplicación de la ficha de valoración de riesgos)."
     },
     {
+        "code": "90863",
+        "name": "Manejo farmacologico"
+    },
+    {
         "code": "99207.02",
         "name": "Intervención grupal en salud mental."
+    },
+    {
+        "code": "98966",
+        "name": "Intervención del gestor del caso."
     },
     {
         "code": "C0012",
@@ -2198,6 +2238,10 @@
     {
         "code": "C0011",
         "name": "Visitas familiares integrales."
+    },
+    {
+        "code": "90849",
+        "name": "Psicoterapia grupal."
     },
     {
         "code": "C0071",

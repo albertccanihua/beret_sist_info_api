@@ -38,7 +38,7 @@ export class UpdatePacketUseCase {
             if (data.specialities) {
                 if (data.specialities.length !== 0) {
                     specialitiesToDelete = savedSpecialities.filter(sItem => {
-                        const index = data.specialities.findIndex(dItem => dItem.speciality.toString() === sItem.speciality.id);
+                        const index = data.specialities.findIndex(dItem => dItem.speciality.id === sItem.speciality.id);
                         if (index !== -1) {
 
                             specialitiesToUpdate.push({

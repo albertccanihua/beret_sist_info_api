@@ -43,6 +43,7 @@ export class PacketsRepositoryImpl extends BaseRepositoryImpl<PacketEntity, Pack
     private customFilters(query: IQueryBuilderRequest<PacketEntity>, args: any): void {
         if (GeneralHelper.existsAndNotEmpty(args, 'id')) query.value.andWhere('packet.id = :id', { id: args.id });
         if (GeneralHelper.existsAndNotEmpty(args, 'name')) query.value.andWhere('packet.name LIKE :name', { name: `%${args.name}%` });
+        if (GeneralHelper.existsAndNotEmpty(args, 'code')) query.value.andWhere('packet.code = :code', { code: args.code });
         if (GeneralHelper.existsBoolean(args, 'status')) query.value.andWhere('packet.status = :status', { status: args.status });
     }
 

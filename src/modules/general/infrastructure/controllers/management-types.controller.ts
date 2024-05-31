@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put, Query } from "@nestjs/common";
+import { Body, Controller, Get, Param, Post, Put, Query, UseGuards } from "@nestjs/common";
 import { ManagementTypesRepositoryImpl } from "../repository/management-types.repositoryimpl";
 import { GetManagementTypesDto } from "../../application/dto/get-management-types.dto";
 import { GetManagementTypesUseCase } from "../../application/usecases/get-management-types.usecase";
@@ -10,6 +10,7 @@ import { ListManagementTypesDto } from "../../application/dto/list-management-ty
 import { ListManagementTypesUseCase } from "../../application/usecases/list-management-tyeps.usecase";
 import { ShowManagementTypeUseCase } from "../../application/usecases/show-management-type.usecase";
 import { ShowManagementTypeDto } from "../../application/dto/show-management-type.dto";
+import { AuthGuard } from "@nestjs/passport";
 
 @Controller('management-types')
 export class ManagementTypesController {
@@ -19,26 +20,31 @@ export class ManagementTypesController {
     ) { }
 
     @Get('/show/:id')
-    show(@Param('id') id: string) {
+    @UseGuards(AuthGuard())
+    show(@Param('id') id: number) {
         return new ShowManagementTypeUseCase(this.managementTypesRepository).exec({ id } as ShowManagementTypeDto);
     }
 
     @Get('/get')
+    @UseGuards(AuthGuard())
     get(@Query() getManagementTypesDto: GetManagementTypesDto) {
         return new GetManagementTypesUseCase(this.managementTypesRepository).exec(getManagementTypesDto);
     }
 
     @Get('/list')
+    @UseGuards(AuthGuard())
     list(@Query() listSpecialitiesDto: ListManagementTypesDto) {
         return new ListManagementTypesUseCase(this.managementTypesRepository).exec(listSpecialitiesDto);
     }
 
     @Post()
+    @UseGuards(AuthGuard())
     create(@Body() createManagementTypeDto: CreateManagementTypeDto) {
         return new CreateManagementTypeUseCase(this.managementTypesRepository).exec(createManagementTypeDto);
     }
 
     @Put()
+    @UseGuards(AuthGuard())
     update(@Body() updateManagementType: UpdateManagementTypeDto) {
         return new UpdateManagementTypeUseCase(this.managementTypesRepository).exec(updateManagementType);
     }

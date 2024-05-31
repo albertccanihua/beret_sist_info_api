@@ -1,22 +1,25 @@
-import { IsOptional, IsString, IsUUID } from "class-validator";
+import { IsNumber, IsOptional, IsPositive, IsString } from "class-validator";
 
 export class GetTreatmentsDto {
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    id: string;
+    id: number;
 
     @IsString()
     @IsOptional()
     code: string;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    packet: string;
+    packet: number;
 
-    @IsUUID()
+    @IsNumber()
+    @IsPositive()
     @IsOptional()
-    patient: string;
+    patient: number;
 
     @IsString()
     @IsOptional()

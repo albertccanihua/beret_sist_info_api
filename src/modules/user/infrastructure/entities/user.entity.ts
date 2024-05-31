@@ -5,8 +5,8 @@ import { BeforeInsert, Column, CreateDateColumn, DeleteDateColumn, Entity, JoinC
 @Entity('users')
 export class UserEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @Column({
         type: 'varchar',

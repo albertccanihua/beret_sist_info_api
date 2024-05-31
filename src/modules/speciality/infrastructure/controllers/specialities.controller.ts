@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards } from "@nestjs/common";
 import { ShowSpecialityUseCase } from "../../application/usercases/show-speciality.usecase";
 import { SpecialitiesRepositoryImpl } from "../repository/speciality.repositoryimpl";
 import { GetSpecialitiesDto } from "../../application/dto/get-specialities.dto";
@@ -12,6 +12,7 @@ import { ListSpecialitiesUseCase } from "../../application/usercases/list-specia
 import { CreateSpecialityUseCase } from "../../application/usercases/create-speciality.usecase";
 import { UpdateSpecialityUseCase } from "../../application/usercases/update-speciality.usecase";
 import { DeleteSpecialityUseCase } from "../../application/usercases/delete-speciality.usecase";
+import { AuthGuard } from "@nestjs/passport";
 
 @Controller('specialities')
 export class SpecialitiesController {
@@ -21,31 +22,37 @@ export class SpecialitiesController {
     ) { }
 
     @Get('/show/:id')
-    show(@Param('id') id: string) {
+    @UseGuards(AuthGuard())
+    show(@Param('id') id: number) {
         return new ShowSpecialityUseCase(this.specialitiesRepository).exec({ id } as ShowSpecialityDto);
     }
 
     @Get('/get')
+    @UseGuards(AuthGuard())
     get(@Query() getSpecialitiesDto: GetSpecialitiesDto) {
         return new GetSpecialitiesUseCase(this.specialitiesRepository).exec(getSpecialitiesDto);
     }
 
     @Get('/list')
+    @UseGuards(AuthGuard())
     list(@Query() listSpecialitiesDto: ListSpecialitiesDto) {
         return new ListSpecialitiesUseCase(this.specialitiesRepository).exec(listSpecialitiesDto);
     }
 
     @Post()
+    @UseGuards(AuthGuard())
     create(@Body() createSpecialityDto: CreateSpecialityDto) {
         return new CreateSpecialityUseCase(this.specialitiesRepository).exec(createSpecialityDto);
     }
 
     @Put()
+    @UseGuards(AuthGuard())
     update(@Body() updateSpecialityDto: UpdateSpecialityDto) {
         return new UpdateSpecialityUseCase(this.specialitiesRepository).exec(updateSpecialityDto);
     }
 
     @Delete()
+    @UseGuards(AuthGuard())
     delete(@Body() deleteSpecialityDto: DeleteSpecialityDto) {
         return new DeleteSpecialityUseCase(this.specialitiesRepository).exec(deleteSpecialityDto);
     }

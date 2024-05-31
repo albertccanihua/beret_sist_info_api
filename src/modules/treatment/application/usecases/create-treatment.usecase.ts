@@ -23,7 +23,7 @@ export class CreateTreatmentUseCase {
         try {
             const response = new ResponseHelper();
 
-            const nextTreatment = await this.treatmentsRepository.getPatientTreatmentCorrelative(data.patient.toString(), data.patient_document_number);
+            const nextTreatment = await this.treatmentsRepository.getPatientTreatmentCorrelative(data.patient.id, data.patient_document_number);
             const statusTreatment = await this.managementTypesRepository.show({ name: 'En proceso' });
             const packetSpecialities: PacketSpeciality[] = await this.packetSpecialitiesRepository.get({ packet: data.packet });
 

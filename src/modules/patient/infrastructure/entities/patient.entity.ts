@@ -5,8 +5,8 @@ import { BeforeInsert, Column, CreateDateColumn, DeleteDateColumn, Entity, JoinC
 @Entity('patients')
 export class PatientEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'user_creator_id' })

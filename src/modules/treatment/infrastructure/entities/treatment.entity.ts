@@ -9,9 +9,8 @@ import { TreatmentAssistanceEntity } from "./treatment-assistance.entity";
 @Entity('treatments')
 export class TreatmentEntity {
 
-    @PrimaryGeneratedColumn('uuid')
-    @Index()
-    id: string;
+    @PrimaryGeneratedColumn('increment')
+    id: number;
 
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'user_creator_id' })
