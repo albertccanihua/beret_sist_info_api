@@ -28,43 +28,43 @@ export class UsersController {
     ) { }
 
     @Get('/show/:id')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     show(@Param('id') id: number) {
         return new ShowUserUseCase(this.usersRepository).exec({ id } as ShowUserDto);
     }
 
     @Get('/get')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     get(@Query() getUsersDto: GetUsersDto) {
         return new GetUsersUseCase(this.usersRepository).exec(getUsersDto);
     }
 
     @Get('/list')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     list(@Query() listUsersDto: ListUsersDto) {
         return new ListUsersUseCase(this.usersRepository).exec(listUsersDto);
     }
 
     @Post()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     create(@Body() createUserDto: CreateUserDto) {
         return new CreateUserUseCase(this.usersRepository).exec(createUserDto);
     }
 
     @Put()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     update(@Body() updateUserDto: UpdateUserDto) {
         return new UpdateUserUseCase(this.usersRepository).exec(updateUserDto);
     }
 
     @Delete()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     delete(@Body() deleteUserDto: DeleteUserDto) {
         return new DeleteUserUseCase(this.usersRepository).exec(deleteUserDto);
     }
 
     @Put('/update-password')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     changePassword(@Body() changePasswordDto: ChangePasswordDto) {
         return new ChangePasswordUseCase(this.usersRepository).exec(changePasswordDto);
     }

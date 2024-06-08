@@ -22,37 +22,37 @@ export class SpecialitiesController {
     ) { }
 
     @Get('/show/:id')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     show(@Param('id') id: number) {
         return new ShowSpecialityUseCase(this.specialitiesRepository).exec({ id } as ShowSpecialityDto);
     }
 
     @Get('/get')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     get(@Query() getSpecialitiesDto: GetSpecialitiesDto) {
         return new GetSpecialitiesUseCase(this.specialitiesRepository).exec(getSpecialitiesDto);
     }
 
     @Get('/list')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     list(@Query() listSpecialitiesDto: ListSpecialitiesDto) {
         return new ListSpecialitiesUseCase(this.specialitiesRepository).exec(listSpecialitiesDto);
     }
 
     @Post()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     create(@Body() createSpecialityDto: CreateSpecialityDto) {
         return new CreateSpecialityUseCase(this.specialitiesRepository).exec(createSpecialityDto);
     }
 
     @Put()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     update(@Body() updateSpecialityDto: UpdateSpecialityDto) {
         return new UpdateSpecialityUseCase(this.specialitiesRepository).exec(updateSpecialityDto);
     }
 
     @Delete()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     delete(@Body() deleteSpecialityDto: DeleteSpecialityDto) {
         return new DeleteSpecialityUseCase(this.specialitiesRepository).exec(deleteSpecialityDto);
     }

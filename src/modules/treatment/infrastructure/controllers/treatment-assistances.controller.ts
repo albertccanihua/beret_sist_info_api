@@ -12,7 +12,7 @@ export class TreatmentAssistancesController {
     ) { }
 
     @Get('/get/follow-up')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     getFollowUp(@Query() getAssistanceFollowUpDto) {
         return new GetAssistanceFollowUpUseCase(
             this.treatmentAssistancesRepository

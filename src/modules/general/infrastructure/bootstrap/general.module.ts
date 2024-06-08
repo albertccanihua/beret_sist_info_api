@@ -4,7 +4,7 @@ import { ManagementTypeEntity } from "../entities/management-type.entity";
 import { ManagementTypesController } from "../controllers/management-types.controller";
 import { ManagementTypesRepositoryImpl } from "../repository/management-types.repositoryimpl";
 import { InitialDataController } from "../controllers/initial-data.controller";
-import { UploadDataController } from "../controllers/upload-data.controller";
+import { UploadDataController } from "../controllers/massive-upload.controller";
 import { PatientModule } from "src/modules/patient/infrastructure/bootstrap/patient.module";
 import { PacketModule } from "src/modules/packet/infrastructure/bootstrap/packet.module";
 import { TreatmentModule } from "src/modules/treatment/infrastructure/bootstrap/treatment.module";

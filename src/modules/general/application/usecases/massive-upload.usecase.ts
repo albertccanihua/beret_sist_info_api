@@ -23,7 +23,7 @@ import { MassiveUploadRepository } from "../../domain/repository/massive-upload.
 import { MassiveUploadItemRepository } from "../../domain/repository/massive-upload-item.repository";
 import { MassiveUpload } from "../../domain/models/massive-upload.model";
 
-export class UploadDataUseCase {
+export class MassiveUploadUseCase {
 
     // General data
     private typeDocuments: ManagementType[] = [];
@@ -68,6 +68,7 @@ export class UploadDataUseCase {
             await this.uploadAssistances(data);
 
             const massiveUpload = await this.massiveUploadRepository.create({
+                filename: data.filename,
                 user_creator: data.user_creator,
                 status: true
             });

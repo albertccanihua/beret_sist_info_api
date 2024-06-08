@@ -24,25 +24,25 @@ export class PacketsController {
     ) { }
 
     @Get('/show/:id')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     show(@Param('id') id: number) {
         return new ShowPacketUseCase(this.packetsRepository).exec({ id } as ShowPacketDto);
     }
 
     @Get('/get')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     get(@Query() getPacketsDto: GetPacketsDto) {
         return new GetPacketsUseCase(this.packetsRepository).exec(getPacketsDto);
     }
 
     @Get('/list')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     list(@Query() listPacketsDto: ListPacketsDto) {
         return new ListPacketsUseCase(this.packetsRepository).exec(listPacketsDto);
     }
 
     @Post()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     create(@Body() createPacketDto: CreatePacketDto) {
         return new CreatePacketUseCase(
             this.packetsRepository,
@@ -51,7 +51,7 @@ export class PacketsController {
     }
 
     @Put()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     update(@Body() updatePacketDto: UpdatePacketDto) {
         return new UpdatePacketUseCase(
             this.packetsRepository,
@@ -60,7 +60,7 @@ export class PacketsController {
     }
 
     @Delete()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     delete(@Body() deletePacketDto: DeletePacketDto) {
         return new DeletePacketUseCase(this.packetsRepository).exec(deletePacketDto);
     }

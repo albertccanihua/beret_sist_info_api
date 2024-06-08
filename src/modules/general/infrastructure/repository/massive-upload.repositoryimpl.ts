@@ -34,6 +34,7 @@ export class MassiveUploadRepositoryImpl extends BaseRepositoryImpl<MassiveUploa
 
     private customFilters(query: IQueryBuilderRequest<MassiveUpload>, args: any): void {
         if (GeneralHelper.existsAndNotEmpty(args, 'id')) query.value.andWhere('massiveUpload.id = :id', { id: args.id });
+        if (GeneralHelper.existsAndNotEmpty(args, 'filename')) query.value.andWhere('massiveUpload.filename LIKE :filename', { filename: `%${args.filename}%` });
     }
 
 }

@@ -21,7 +21,7 @@ export class TreatmentsController {
     ) { }
 
     @Get('/show/:id')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     show(@Param('id') id: number) {
         return new ShowTreatmentUseCase(
             this.treatmentRepository
@@ -29,7 +29,7 @@ export class TreatmentsController {
     }
 
     @Get('/get')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     get(@Query() getTreatmentsDto: GetTreatmentsDto) {
         return new GetTreatmentsUseCase(
             this.treatmentRepository
@@ -37,7 +37,7 @@ export class TreatmentsController {
     }
 
     @Post()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     create(@Body() createTreatmentDto: CreateTreatmentDto) {
         return new CreateTreatmentUseCase(
             this.treatmentRepository,

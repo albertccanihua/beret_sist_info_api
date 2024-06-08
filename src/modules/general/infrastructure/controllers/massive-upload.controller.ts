@@ -1,8 +1,8 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, Param, Post, Query, UseGuards } from "@nestjs/common";
 import { UploadDataDto } from "../../application/dto/upload-data.dto";
 import { PatientsRepositoryImpl } from "src/modules/patient/infrastructure/repository/patient.repositoryimpl";
 import { ManagementTypesRepositoryImpl } from "../repository/management-types.repositoryimpl";
-import { UploadDataUseCase } from "../../application/usecases/upload-data.usecase";
+import { MassiveUploadUseCase } from "../../application/usecases/massive-upload.usecase";
 import { PacketsRepositoryImpl } from "src/modules/packet/infrastructure/repository/packets.repositoryimpl";
 import { TreatmentsRepositoryImpl } from "src/modules/treatment/infrastructure/repository/treatments.repositoryimpl";
 import { TreatmentSpecialitiesRepositoryImpl } from "src/modules/treatment/infrastructure/repository/treatment-specialities.repositoryimpl";
@@ -15,8 +15,10 @@ import { ShowMassiveUploadUseCase } from "../../application/usecases/show-massiv
 import { ShowMassiveUploadDto } from "../../application/dto/show-massive-upload.dto";
 import { MassiveUploadItemRepositoryImpl } from "../repository/massive-upload-item.repositoryimpl";
 import { AuthGuard } from "@nestjs/passport";
+import { GetMassiveUploadsDto } from "../../application/dto/get-massive-uploads.dto";
+import { GetMassiveUploadsUseCase } from "../../application/usecases/get-massive-uploads.usecase";
 
-@Controller('upload-data')
+@Controller('massive-upload')
 export class UploadDataController {
 
     constructor(
@@ -34,9 +36,9 @@ export class UploadDataController {
     ) { }
 
     @Post()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     upload(@Body() data: UploadDataDto) {
-        return new UploadDataUseCase(
+        return new MassiveUploadUseCase(
             this.patientsRepository,
             this.usersRepository,
             this.managementTypesRepository,
@@ -52,10 +54,18 @@ export class UploadDataController {
     }
 
     @Get('/show/:id')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     show(@Param('id') id: number) {
         return new ShowMassiveUploadUseCase(
             this.massiveUploadRepository
         ).exec({ id } as ShowMassiveUploadDto);
+    }
+
+    @Get('/get')
+    @UseGuards(AuthGuard('jwt'))
+    get(@Query() getMassiveUploadsDto: GetMassiveUploadsDto) {
+        return new GetMassiveUploadsUseCase(
+            this.massiveUploadRepository
+        ).exec(getMassiveUploadsDto);
     }
 }

@@ -15,7 +15,7 @@ export class TreatmentRequestController {
     ) { }
 
     @Get('/get/follow-up')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     getFollowUp(@Query() getFollowUpDto: GetFollowUpDto) {
         return new GetFollowUpUseCase(
             this.treatmentRequestsRepository
@@ -23,7 +23,7 @@ export class TreatmentRequestController {
     }
 
     @Get('get/follow-up-details')
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     getFollowUpDetails(@Query() getFollowUpDetails: GetFollowUpDto) {
         return new GetRequestsFollowUpDetailsUseCase(
             this.treatmentRequestsRepository
@@ -31,7 +31,7 @@ export class TreatmentRequestController {
     }
 
     @Post()
-    @UseGuards(AuthGuard())
+    @UseGuards(AuthGuard('jwt'))
     create(@Body() createTreatmentRequestDto: CreateTreatmentRequestDto) {
         return new CreateTreatmentRequestUseCase(
             this.treatmentRequestsRepository

@@ -8,6 +8,12 @@ export class MassiveUploadEntity {
     @PrimaryGeneratedColumn('increment')
     id: number;
 
+    @Column({
+        type: 'varchar',
+        nullable: false
+    })
+    filename: string;
+
     @ManyToOne(() => UserEntity)
     @JoinColumn({ name: 'user_creator_id' })
     user_creator: number;

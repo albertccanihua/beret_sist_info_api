@@ -9,6 +9,9 @@ export class CreatePacketDto {
     user_creator: number;
 
     @IsString()
+    code: string;
+
+    @IsString()
     name: string;
 
     @IsString()
