@@ -10,6 +10,9 @@ export class CreatePatientDto {
     document_number: string;
 
     @IsString()
+    medical_history: string;
+
+    @IsString()
     @IsOptional()
     dob: string;
 

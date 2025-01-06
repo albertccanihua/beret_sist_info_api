@@ -20,6 +20,7 @@ export class CreatePatientUseCase {
             const patient = await this.patientsRepository.create({
                 user_creator: data.user_creator,
                 document_number: data.document_number,
+                medical_history: data.medical_history,
                 dob: data.dob,
                 name: data.name,
                 paternal_surname: data.paternal_surname,

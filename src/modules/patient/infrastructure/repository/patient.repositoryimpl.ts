@@ -79,6 +79,7 @@ export class PatientsRepositoryImpl extends BaseRepositoryImpl<PatientEntity, Pa
         if (GeneralHelper.existsAndNotEmpty(args, 'type_document')) query.value.andWhere('patient.type_document_id = :type_document', { type_document: args.type_document });
         if (GeneralHelper.existsAndNotEmpty(args, 'type_financing')) query.value.andWhere('patient.type_financing_id = :type_financing', { type_financing: args.type_financing });
         if (GeneralHelper.existsAndNotEmpty(args, 'document_number')) query.value.andWhere('patient.document_number = :document_number', { document_number: args.document_number });
+        if (GeneralHelper.existsAndNotEmpty(args, 'medical_history')) query.value.andWhere('patient.medical_history = :medical_history', { medical_history: args.medical_history });
         if (GeneralHelper.existsAndNotEmpty(args, 'status')) query.value.andWhere('patient.status = :status', { status: args.status });
     }
 }

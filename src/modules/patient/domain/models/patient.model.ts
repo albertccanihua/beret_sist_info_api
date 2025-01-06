@@ -3,6 +3,7 @@ export class Patient {
     id?: number;
     user_creator: number;
     document_number: string;
+    medical_history: string;
     dob?: string;
     name: string;
     paternal_surname: string;

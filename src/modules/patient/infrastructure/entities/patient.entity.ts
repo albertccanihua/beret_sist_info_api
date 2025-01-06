@@ -21,6 +21,14 @@ export class PatientEntity {
     document_number: string;
 
     @Column({
+        type: 'varchar',
+        length: 50,
+        unique: false,
+        nullable: false,
+    })
+    medical_history: string;
+
+    @Column({
         type: 'date',
         nullable: true
     })

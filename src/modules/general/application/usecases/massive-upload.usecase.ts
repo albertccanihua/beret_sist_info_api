@@ -114,6 +114,8 @@ export class MassiveUploadUseCase {
                     await this.patientsRepository.create({
                         user_creator: data.user_creator,
                         document_number: item.numero_documento_paciente,
+                        medical_history: item.historia_clinica,
+                        dob: item.fecha_nacimiento_paciente,
                         name: item.nombres_paciente,
                         paternal_surname: item.apellido_paterno_paciente,
                         maternal_lastname: item.apellido_materno_paciente,
@@ -170,14 +172,21 @@ export class MassiveUploadUseCase {
             // Find packet by the relational code
             // =================================
 
-            const foundPacket = this.getPacketByPacketCode(item.codigo_item);
+            let foundPacket: any = null;
 
-            // If we find a package set as current packet and go to the next item
-            // =================================
+            if (currentPacketId === null) {
+                foundPacket = this.getPacketByPacketCode(item.codigo_item);
+                if (foundPacket !== null) currentPacketId = foundPacket.id;
+            } else if (currentPacketId !== null) {
 
-            if (foundPacket !== null) {
-                currentPacketId = foundPacket.id;
-                continue;
+                // If we find a package set as current packet and go to the next item
+                // =================================
+
+                foundPacket = this.getPacketByPacketCode(item.codigo_item);
+                if (foundPacket !== null && foundPacket.id !== currentPacketId) {
+                    currentPacketId = foundPacket.id;
+                    continue;
+                }
             }
 
             // If the current package is null add the item to an error array with the reason
@@ -275,7 +284,7 @@ export class MassiveUploadUseCase {
 
             try {
                 await this.treatmentAssistancesRepository.create({
-                    date_appointment: '',
+                    date_appointment: item.fecha_atencion,
                     date_care: item.fecha_atencion,
                     status: true,
                     treatment: new Treatment(activeTreatment.id),

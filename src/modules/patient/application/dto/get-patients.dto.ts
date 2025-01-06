@@ -18,6 +18,10 @@ export class GetPatientsDto {
 
     @IsString()
     @IsOptional()
+    medical_history: string;
+
+    @IsString()
+    @IsOptional()
     name: string;
 
     @IsString()
